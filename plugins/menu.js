@@ -168,7 +168,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `مرحبا بيكم في بوت kanna من تطوير الغربي,
+          "title": `*مرحبا بيكم في بوت kanna من تطوير الغربي*,
 ┌─────❲ *kanna* ❳
 ┊
 └─────────────────❋ཻུ۪۪⸙
@@ -202,82 +202,82 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "rowId": ".git"
                 }, {
                   "title": "🎮الالعاب",
-                  "description": "Game features",
+                  "description": "مميزات العبه",
                   "rowId": ".? game"
 
                 }, {
                   "title": "🎗️النقاط",
-                  "description": "Features level & usage limit",
+                  "description": "مستوى الميزات وحد الاستخدام",
                   "rowId": ".? xp"
 
                 },  {
                   "title": "🎥صانع الفيديوهات",
-                  "description": "Making Different Types Of Videos",
+                  "description": "عمل أنواع مختلفة من مقاطع الفيديو",
                   "rowId": ".? .videomaker"
 
                 },{
                   "title": "🌺ستيكرز",
-                  "description": "Features for making stickers",
+                  "description": "ميزات لصنع الملصقات",
                   "rowId": ".? stiker"
                 }, { 
                 "title": "💮انمي",
-                "description": "Anime Related Plugin",
+                "description": "البرنامج المساعد ذات الصلة أنيمي",
                 "rowId": ".? anime"
               },  {
-                  "title": "Quotes",
-                  "description": "Gives You random quotes",
+                  "title": "🌺اقتباسات",
+                  "description": "يعطيك اقتباسات عشوائية",
                   "rowId": ".? quote"
                 }, {
                   "title": "🌹أدمن",
-                  "description": "Group Admin Commands",
+                  "description": "أوامر إدارة المجموعة",
                   "rowId": ".? admin"
                 }, {
                   "title": "🌹المجموعة",
-                  "description": "Group Related Commands",
+                  "description": "مجموعة الأوامر ذات الصلة",
                   "rowId": ".? grup"
                 }, {
                   "title": "⏫الترقية",
-                  "description": "Premium Users Plugins",
+                  "description": "إضافات المستخدمين المتميزة",
                   "rowId": ".? premium"
                 }, {
                   "title": "🕷️الانترنت",
-                  "description": "Commands Related To Internet",
+                  "description": "الأوامر المتعلقة بالإنترنت",
                   "rowId": ".? internet"
                 }, {
                   "title": "🦥الهاكر",
-                  "description": "To Start Anonymous Chatting",
+                  "description": "لبدء الدردشة المجهولة",
                   "rowId": ".? anonymous"
                 }, {
                   "title": "🦋سحر تصميم",
-                  "description": "Random answer feature",
+                  "description": "ميزة الإجابة العشوائية",
                   "rowId": `.? magicshell`
                 }, {
                   "title": "🐾صانع اللوغو",
-                  "description": "Text Maker Coammnds",
+                  "description": "أوامر Text Maker",
                   "rowId": ".? nulis"
                 }, {
                   "title": "🌵التحميلات",
-                  "description": "Downloading Commnds",
+                  "description": "الأوامر تنزيل ",
                   "rowId": ".? downloader"
                 }, {
                   "title": "🐲الادوات",
-                  "description": "Tool features",
+                  "description": "ميزات الأداة",
                   "rowId": ".? tools"
                 }, {
                   "title": "🐥مغير الصوت",
-                  "description": "To change the voice",
+                  "description": "لتغيير الصوت",
                   "rowId": `.? audio`
                 }, {
                   "title": "🐉متعة و كذا",
-                  "description": "Just for fun",
+                  "description": "لتغيير الصوت",
                   "rowId": ".? fun"
                 }, {
                   "title": "🦅اساسيات",
-                  "description": "User database",
+                  "description": "قاعدة بيانات المستخدم",
                   "rowId": ".? database"
                 },{
                   "title": "🤖صاحب البوت",
-                  "description": "Owner's special features",
+                  "description": "ميزات المالك الخاصة",
                   "rowId": ".? owner"
                 }
               ]
@@ -365,7 +365,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160297587-cf1d132c-a045-470f-b805-f8100c3316a9.jpg")).buffer(), text.trim(), '© الغربي ©', '.المالك', 'الكل', '.قائمة', m)
+    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160297587-cf1d132c-a045-470f-b805-f8100c3316a9.jpg")).buffer(), text.trim(), '© الغربي ', '.المالك', 'الكل', '.قائمة', m)
   } catch (e) {
     conn.reply(m.chat, 'اسف, حاول مجددا', m)
     throw e
