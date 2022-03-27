@@ -168,8 +168,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `ᴡɪᴢᴀʀᴅ sᴇʀ  ʙʏ ᴀᴊᴍᴀʟ ᴀɴᴅ ᴀᴄʜᴜ,
-┌─────❲ *ᴡɪᴢᴀʀᴅ sᴇʀ* ❳
+          "title": `مرحبا بيكم في بوت kanna من تطوير الغربي,
+┌─────❲ *kanna* ❳
 ┊
 └─────────────────❋ཻུ۪۪⸙
         
@@ -178,13 +178,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         ║╔╗║║╠╣║╔║║╗
         ╚╝╚╝╚╝╚╝╚══╝
 
-┌─────❲ ᴀʙᴏᴜᴛ ❳
-┊☞  Oi ${ucapan()}
+┌─────❲ kanna ❳
+┊☞   ${ucapan()}
 ┊☞ 👤 *اسم* : ${name}
 ┊☞ 🧭 *زمن* : ${time},
 ┊☞ 💫 *الاسبوع* : ${week},
 ┊☞ ✅ *تاريخ* : ${date},
-┊☞ 💝 *المالك* : الغربي
+┊☞ 💝 *المطور* : الغربي
 ┊☞ 🖌️ *اختصار* : متعدد 
 ┊☞ ☮️ *اسم البوت* : kanna
 └─────────────────⸙ \n\ ______`
@@ -365,7 +365,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonImg(m.chat, await (await fetch("https://raw.githubusercontent.com/Neeraj-x0/Millie/main/Millie/mills.jpeg")).buffer(), text.trim(), '© الغربي ©', '.المالك', 'الكل', '.listt', m)
+    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160297587-cf1d132c-a045-470f-b805-f8100c3316a9.jpg")).buffer(), text.trim(), '© الغربي ©', '.المالك', 'الكل', '.قائمة', m)
   } catch (e) {
     conn.reply(m.chat, 'اسف, حاول مجددا', m)
     throw e
