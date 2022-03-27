@@ -5,9 +5,9 @@ ${usedPrefix + command} 100
 
 means you bet 100 XP.
 
-*JACKPOT:* your bet is doubled
-*Unlucky:* +1 XP
-*Lose:* your bet is taken`.trim()
+*نايس :* your bet is doubled
+*لست محظوظا:* +1 XP
+*خسرت:* your bet is taken`.trim()
     if (!args[0]) throw fa
     if (isNaN(args[0])) throw fa
     let taruhan = parseInt(args[0])
@@ -43,18 +43,18 @@ means you bet 100 XP.
     }
     let end;
     if (a == b && b == c) {
-        end = `JACKPOT! 🥳 *+${taruhan + taruhan} XP*`
+        end = `مبروك! 🥳 *+${taruhan + taruhan} XP*`
         users.exp += taruhan
     } else if (a == b || a == c || b == c) {
         end = `Less fortunate 👍 *+1 XP*`
         users.exp += 1
     } else {
-        end = `You lose😥 *-${taruhan} XP*`
+        end = `لقد خسرت😥 *-${taruhan} XP*`
         users.exp -= taruhan
     }
     users.lastslot = new Date * 1
     return await conn.sendButton(m.chat,
-        `*[ 🎰 | SLOTS ]*
+        `*[ 🎰 | لعبة و كزا ]*
 
 ${end}
 
