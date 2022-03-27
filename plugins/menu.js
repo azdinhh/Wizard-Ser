@@ -5,17 +5,23 @@ let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
-    before: `╭────────────────╮
-                ✪  *الغربي بوت* ✪           
-             ╰────────────────╯
-       
-  `.trimStart(),
+  before: `
+━━━━ 「 *بوت الغربي* 」 ━━━━͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
+
+     ✪〔 %me 〕✪
+🔸Hai, %name!
+
+🔸 Github: [ RELEASING SOON ]
+
+
+     〘 *بوت الغربي* 〙
+%readmore`.trimStart(),
   header: '┌─〔 %category 〕',
   body: '├ %cmd',
   footer: '└────\n',
   after: `
-   الغربي
-   بوت ذكي و كذا
+*%npmname@*
+${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -24,27 +30,27 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let arrayMenu = ['git', 'game', 'xp', 'stiker','quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools','anime','videomaker', 'fun', 'database', 'audio','info','owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-    'main🐋': 'Main',
-    'game🐋': 'Game',
-    'xp🐋': 'Exp & Limit',
-    'anime🐋': 'Anime',
-    'sticker🐋': 'Stiker',
-    'shell🐋': 'Magic Shells',
-    'quotes🐋': 'Quotes',
-    'admin🐋': `Admin ${global.opts['restrict'] ? '' : '(Disabled)'}`,
-    'group🐋': 'Grup',
-    'premium🐋': 'Premium',
-    'internet🐋': 'Internet',
-    'anonymous🐋': 'Anonymous Chat',
-    'nulis🐋': 'MagerNulis & Logo',
-    'downloader🐋': 'Downloader',
-    'tools🐋': 'Tools',
-    'Video Maker🐋':'videomaker',
-    'fun🐋': 'Fun',
-    'database🐋': 'Database',
-    'vote🐋': 'Voting',
-    'audio🐋': 'Voice Changer',
-    'info🐋': 'Info',
+    'main': 'Main',
+    'game': 'Game',
+    'xp': 'Exp & Limit',
+    'anime': 'Anime',
+    'sticker': 'Stiker',
+    'shell': 'Magic Shells',
+    'quotes': 'Quotes',
+    'admin': `Admin ${global.opts['restrict'] ? '' : '(Disabled)'}`,
+    'group': 'Grup',
+    'premium': 'Premium',
+    'internet': 'Internet',
+    'anonymous': 'Anonymous Chat',
+    'nulis': 'MagerNulis & Logo',
+    'downloader': 'Downloader',
+    'tools': 'Tools',
+    'Video Maker':'videomaker',
+    'fun': 'Fun',
+    'database': 'Database',
+    'vote': 'Voting',
+    'audio': 'Voice Changer',
+    'info': 'Info',
     '': 'No Category',
   }
   if (teks == 'game') tags = {
@@ -162,106 +168,116 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `HI,
-╭━━━━━━ᆫ ᴍᴇɴᴜ ᄀ━━━━━━
-  اوهايو ${ucapan(┃ ⎆
-  *الاسم* : ${name}
-  *بوت*   : 👑ᎷᏫᎡᏫᏨᏨᏫ࿇ Ᏸ ᏫᎿ🔱悪┃ ⎆
-  *🌹المالك* :🌹   الغربي┃ ⎆
-  *الاختصاصات* : متعدد┃ ⎆
-  *الاسبوع* : ${week},┃ ⎆
-  *اليوم* : ${date},┃ ⎆
-╰━━━━━━━━━━━━━━━━━━━━━━━ \n`
+          "title": `ᴡɪᴢᴀʀᴅ sᴇʀ  ʙʏ ᴀᴊᴍᴀʟ ᴀɴᴅ ᴀᴄʜᴜ,
+┌─────❲ *ᴡɪᴢᴀʀᴅ sᴇʀ* ❳
+┊
+└─────────────────❋ཻུ۪۪⸙
+        
+        ╔╗╔╗╔══╗╔══╗
+        ║╚╝║║╔╗║╚║║╝
+        ║╔╗║║╠╣║╔║║╗
+        ╚╝╚╝╚╝╚╝╚══╝
+
+┌─────❲ ᴀʙᴏᴜᴛ ❳
+┊☞  Oi ${ucapan()}
+┊☞ 👤 *اسم* : ${name}
+┊☞ 🧭 *زمن* : ${time},
+┊☞ 💫 *الاسبوع* : ${week},
+┊☞ ✅ *تاريخ* : ${date},
+┊☞ 💝 *المالك* : الغربي
+┊☞ 🖌️ *اختصار* : ᴍᴜʟᴛɪ ᴘʀᴇғɪx 
+┊☞ ☮️ *اسم البوت* : ᴡɪᴢᴀʀᴅ sᴇʀ
+└─────────────────⸙ \n\ ______`
           
            .trim(),
-           "description": "*ممنوع السبام*",
-          "buttonText":  "اضغط هنا",
+           "description": "*DON'T SPAM*",
+          "buttonText": "Click  Here",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
               "rows": [
                 {
-                  "title": `🐦الغربي`,
-                  "description": "اصل البوت",
+                  "title": `GHRBYB SER`,
+                  "description": "GHRBYB ser git link",
                   "rowId": ".git"
                 }, {
-                  "title": "🛎️الالعاب",
-                  "description": "",
+                  "title": "🎮الالعاب",
+                  "description": "Game features",
                   "rowId": ".? game"
 
                 }, {
-                  "title": "🥀النقاط",
-                  "description": "",
+                  "title": "🎗️النقاط",
+                  "description": "Features level & usage limit",
                   "rowId": ".? xp"
 
                 },  {
-                  "title": "🌸صانع الفيديوهات",
-                  "description": "",
-                  "rowId": ".? videomaker"
+                  "title": "🎥صانع الفيديوهات",
+                  "description": "Making Different Types Of Videos",
+                  "rowId": ".? .videomaker"
 
                 },{
-                  "title": "🌺ستيكر",
-                  "description": "",
+                  "title": "🌺ستيكرز",
+                  "description": "Features for making stickers",
                   "rowId": ".? stiker"
                 }, { 
                 "title": "💮انمي",
-                "description": "",
+                "description": "Anime Related Plugin",
                 "rowId": ".? anime"
               },  {
-                  "title": "👍مدري هاهاها",
-                  "description": "",
+                  "title": "Quotes",
+                  "description": "Gives You random quotes",
                   "rowId": ".? quote"
                 }, {
-                  "title": "💜ادمن",
-                  "description": "",
+                  "title": "🌹أدمن",
+                  "description": "Group Admin Commands",
                   "rowId": ".? admin"
                 }, {
-                  "title": "🌼المجموعة",
-                  "description": "",
+                  "title": "🌹المجموعة",
+                  "description": "Group Related Commands",
                   "rowId": ".? grup"
                 }, {
-                  "title": "☘️الترقية",
-                  "description": "",
+                  "title": "⏫الترقية",
+                  "description": "Premium Users Plugins",
                   "rowId": ".? premium"
                 }, {
                   "title": "🕷️الانترنت",
-                  "description": "",
+                  "description": "Commands Related To Internet",
                   "rowId": ".? internet"
                 }, {
                   "title": "🦥الهاكر",
-                  "description": "",
+                  "description": "To Start Anonymous Chatting",
                   "rowId": ".? anonymous"
                 }, {
                   "title": "🦋سحر تصميم",
-                  "description": "",
-                  "rowId": ".? magicshell"
+                  "description": "Random answer feature",
+                  "rowId": `.? magicshell`
                 }, {
                   "title": "🐾صانع اللوغو",
-                  "description": "",
+                  "description": "Text Maker Coammnds",
                   "rowId": ".? nulis"
                 }, {
                   "title": "🌵التحميلات",
-                  "description": "",
+                  "description": "Downloading Commnds",
                   "rowId": ".? downloader"
                 }, {
                   "title": "🐲الادوات",
-                  "description": "",
+                  "description": "Tool features",
                   "rowId": ".? tools"
                 }, {
                   "title": "🐥مغير الصوت",
-                  "description": "",
+                  "description": "To change the voice",
                   "rowId": `.? audio`
                 }, {
                   "title": "🐉متعة و كذا",
-                  "description": "",
+                  "description": "Just for fun",
                   "rowId": ".? fun"
                 }, {
                   "title": "🦅اساسيات",
-                  "description": "",
+                  "description": "User database",
                   "rowId": ".? database"
                 },{
-                  "title": "🐋صاحب البوت",
-                  "description": "",
+                  "title": "🤖صاحب البوت",
+                  "description": "Owner's special features",
                   "rowId": ".? owner"
                 }
               ]
@@ -349,13 +365,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonImg(m.chat, await (await fetch("https://raw.githubusercontent.com/Neeraj-x0/Millie/main/Millie/mills.jpeg")).buffer(), text.trim(), '© يحيى ©', '.المالك', 'الكل', '.listt', m)
+    await conn.send2ButtonImg(m.chat, await (await fetch("https://raw.githubusercontent.com/Neeraj-x0/Millie/main/Millie/mills.jpeg")).buffer(), text.trim(), '© الغربي ©', '.المالك', 'الكل', '.listt', m)
   } catch (e) {
     conn.reply(m.chat, 'اسف, حاول مجددا', m)
     throw e
   }
 }
-handler.help = ['menu', 'help','القائمة','yahya', '?']
+handler.help = ['menu', 'help','القائمة','GHRBYB', '?']
 handler.tags = ['main']
 handler.command = /^(list|menu|help|millie|bot|\?)$/i
 handler.owner = false
