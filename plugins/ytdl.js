@@ -13,14 +13,14 @@ let handler = async (m, { itsu, args, isPrems, isOwner, usedPrefix, text }) => {
 await itsu.relayWAMessage(itsu.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": `*Title*: ${title}`,
-                        "description": " \n_©ᴡɪᴢᴀʀᴅ sᴇʀ_ ",
+                        "description": " \n_©الغربي ",
                         "buttonText": `Quality`,
                         "listType": "SINGLE_SELECT",
                         "sections": [
                             { title: '『 Quality Video』',
                                 "rows": [
                                     {
-                                        "title": `Audio`, "description":  title,
+                                        "title": `اوديو`, "description":  title,
                                         "rowId": `${usedPrefix}dlmsc ${args[0]}`
                                     }, {
                                        "title": `240p✅ , "description": title,
