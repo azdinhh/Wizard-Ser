@@ -1,35 +1,35 @@
 let pajak = 0.02
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    let fail = `this command to give limit to other users\n\nexample:\n${usedPrefix + command} @919539102851 10\nor reply to doi's message with the command: ${usedPrefix + command} 10`
+    let fail = `this command to give limit to other users\n\nexample:\n${usedPrefix + command} @212641427490 10\nor reply to doi's message with the command: ${usedPrefix + command} 10`
     let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
     else who = m.chat
     if (!who) {
-        conn.reply(m.chat, fail, m, { contextInfo: { mentionedJid: ['919539102851@s.whatsapp.net'] } })
+        conn.reply(m.chat, fail, m, { contextInfo: { mentionedJid: ['212641427490@s.whatsapp.net'] } })
         throw false
     }
     if (typeof global.db.data.users[who] == "undefined") {
         global.db.data.users[who] = {
-            exp: 0,
-            limit: 10,
-            lastclaim: 0,
-            registered: false,
-            name: conn.getName(m.sender),
-            age: -1,
-            regTime: -1,
-            afk: -1,
-            afkReason: '',
-            banned: false,
-            level: 0,
-            call: 0,
-            role: 'Warrior V',
-            autolevelup: false,
-            pc: 0,
+            النقاط: 0,
+            الحدود: 10,
+            آخر جائزة: 0,
+            التسجيل: false,
+            الاسم: conn.getName(m.sender),
+            العمر: -1,
+            تايم: -1,
+            فهم: -1,
+            سبب: '',
+            ممنوع: false,
+            لفل: 0,
+            الاتصال: 0,
+            الدور: 'Warrior V',
+            لفل تلقائي: false,
+            حاسوب: 0,
         }
     }
     let txt = text.replace('@' + who.split`@`[0], '').trim()
     if (!txt) {
-        conn.reply(m.chat, fail, m, { contextInfo: { mentionedJid: ['919539102851@s.whatsapp.net'] } })
+        conn.reply(m.chat, fail, m, { contextInfo: { mentionedJid: ['918113921898@s.whatsapp.net'] } })
         throw false
     }
     if (isNaN(txt)) throw 'only numbers'
