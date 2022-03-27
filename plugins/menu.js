@@ -185,20 +185,20 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 ┊☞ 💫 *الاسبوع* : ${week},
 ┊☞ ✅ *تاريخ* : ${date},
 ┊☞ 💝 *المالك* : الغربي
-┊☞ 🖌️ *اختصار* : ᴍᴜʟᴛɪ ᴘʀᴇғɪx 
-┊☞ ☮️ *اسم البوت* : ᴡɪᴢᴀʀᴅ sᴇʀ
+┊☞ 🖌️ *اختصار* : متعدد 
+┊☞ ☮️ *اسم البوت* : kanna
 └─────────────────⸙ \n\ ______`
           
            .trim(),
-           "description": "*DON'T SPAM*",
-          "buttonText": "Click  Here",
+           "description": "*ممنوع السبام*",
+          "buttonText": "اضغط هنا",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
               "rows": [
                 {
-                  "title": `GHRBYB SER`,
-                  "description": "GHRBYB ser git link",
+                  "title": `GHRBYB `,
+                  "description": "اصل البوت",
                   "rowId": ".git"
                 }, {
                   "title": "🎮الالعاب",
