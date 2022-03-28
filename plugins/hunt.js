@@ -1,45 +1,45 @@
 let handler = async (m, { conn, text }) => {
 
 	let monsters = [
-		{ area: 1, name: "Goblin" },
-		{ area: 1, name: "Slime" },
-		{ area: 1, name: "Wolf" },
-		{ area: 2, name: "Nymph" },
-		{ area: 2, name: "Skeleton" },
-		{ area: 2, name: "Wolf" },
-		{ area: 3, name: "Baby Demon" },
-		{ area: 3, name: "Ghost" },
-		{ area: 3, name: "Zombie" },
-		{ area: 4, name: "Imp" },
-		{ area: 4, name: "Witch" },
-		{ area: 4, name: "Zombie" },
-		{ area: 5, name: "Ghoul" },
-		{ area: 5, name: "Giant Scorpion" },
-		{ area: 5, name: "Unicorn" },
-		{ area: 6, name: "Baby Robot" },
-		{ area: 6, name: "Sorcerer" },
-		{ area: 6, name: "Unicorn" },
-		{ area: 7, name: "Cecaelia" },
-		{ area: 7, name: "Giant Piranha" },
-		{ area: 7, name: "Mermaid" },
-		{ area: 8, name: "Giant Crocodile" },
-		{ area: 8, name: "Nereid" },
-		{ area: 8, name: "Mermaid" },
-		{ area: 9, name: "Demon" },
-		{ area: 9, name: "Harpy" },
-		{ area: 9, name: "Killer Robot" },
-		{ area: 10, name: "Dullahan" },
-		{ area: 10, name: "Manticore" },
-		{ area: 10, name: "Killer Robot" },
-		{ area: 11, name: "Baby Dragon" },
-		{ area: 11, name: "Young Dragon" },
-		{ area: 11, name: "Scaled Baby Dragon" },
-		{ area: 12, name: "Kid Dragon" },
-		{ area: 12, name: "Not so young Dragon" },
-		{ area: 12, name: "Scaled Kid Dragon" },
-		{ area: 13, name: "Definitely not so young Dragon" },
-		{ area: 13, name: "Teen Dragon" },
-		{ area: 13, name: "Scaled Teen Dragon" },
+		{ area: 1, اسم: "عفريت" },
+		{ area: 1, اسم: "الوحل" },
+		{ area: 1, اسم: "ذئب" },
+		{ area: 2, اسم: "حورية" },
+		{ area: 2, اسم: "هيكل عظمي" },
+		{ area: 2, اسم: "ذئب" },
+		{ area: 3, اسم: "طفل شيطان" },
+		{ area: 3, اسم: "شبح" },
+		{ area: 3, اسم: "زومبي" },
+		{ area: 4, اسم: "عفريت" },
+		{ area: 4, اسم: "ساحرة" },
+		{ area: 4, اسم: "زومبي" },
+		{ area: 5, اسم: "الغول" },
+		{ area: 5, اسم: "العقرب العملاق" },
+		{ area: 5, اسم: "وحيد القرن" },
+		{ area: 6, اسم: "طفل روبوت" },
+		{ area: 6, اسم: "ساحر" },
+		{ area: 6, اسم: "وحيد القرن" },
+		{ area: 7, اسم: "سيسيليا" },
+		{ area: 7, اسم: "العملاق البيرانا" },
+		{ area: 7, اسم: "حورية البحر" },
+		{ area: 8, اسم: "التمساح العملاق" },
+		{ area: 8, اسم: "نيريد" },
+		{ area: 8, اسم: "حورية البحر" },
+		{ area: 9, اسم: "شيطان" },
+		{ area: 9, اسم: "هاربي" },
+		{ area: 9, اسم: "الروبوت القاتل" },
+		{ area: 10, اسم: "دلهان" },
+		{ area: 10, اسم: "مانتيكور" },
+		{ area: 10, اسم: "الروبوت القاتل" },
+		{ area: 11, اسم: "التنين الصغير" },
+		{ area: 11, اسم: "التنين الصغير" },
+		{ area: 11, اسم: "تنين صغير الحجم" },
+		{ area: 12, اسم: "طفل التنين" },
+		{ area: 12, اسم: "ليس صغير التنين" },
+		{ area: 12, اسم: "طفل التنين تحجيم" },
+		{ area: 13, اسم: "بالتأكيد ليس التنين الصغير جدًا" },
+		{ area: 13, اسم: "التنين التين" },
+		{ area: 13, اسم: "التنين التين تحجيم" },
 	]
 	let player = global.DATABASE.data.users[m.sender]
 	let pname = conn.getName(m.sender)
@@ -64,22 +64,22 @@ let handler = async (m, { conn, text }) => {
 		player.lasthunt = new Date * 1 // waktu hunt 2menit
 
 		if (player.healt < 0) {
-			let msg = `*${pname}* You Die Killed By ${monsterName}`
+			let msg = `*${pname}* أنت تموت بقتلك ${monsterName}`
 			if (player.level > 0) {
 				player.level -= 1
-				msg += `\nYour Level Drops 1 For Dying While Hunting!`
+				msg += `\ينخفض ​​المستوى 1 للموت أثناء الصيد!`
 			}
 			player.healt = 100
 			m.reply(msg)
 			return
 		}
 
-		player.limit += limit * 1
-		player.exp += exp * 1
+		player.limit += حد * 1
+		player.exp += إكسب * 1
 
-		let pesan = `*${pname}* Find And Kill *${monsterName}*\nGet ${new Intl.NumberFormat('en-US').format(coins)} coins & ${new Intl.NumberFormat('en-US').format(exp)} XP\nDecreased -${dmg}Hp, Remaining ${player.healt}/${100}`
+		let pesan = `*${pname}* البحث والقتل *${monsterName}*\nGet ${new Intl.NumberFormat('en-US').format(coins)} coins & ${new Intl.NumberFormat('en-US').format(exp)} XP\nDecreased -${dmg}Hp, Remaining ${player.healt}/${100}`
 		m.reply(pesan)
-	} else throw `Wait *00:${cd1}:${cd2}* To Hunt Again`
+	} else throw `انتظر *00:${cd1}:${cd2}* للصيد مرة أخرى`
 }
 
 handler.help = ['hunt']
