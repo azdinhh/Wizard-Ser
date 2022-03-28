@@ -13,8 +13,8 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
     try { _thumb = { thumbnail: await (await fetch(thumb)).buffer() } }
     catch (e) { }
     if (!isLimit) conn.sendFile(m.chat, dl_link, '', `
-*Title:* ${title}
-*File Size:* ${filesizeF}
+*العنوان:* ${title}
+*حجم الفيديو:* ${filesizeF}
   `.trim(), m, 0, {
       ..._thumb,
       asDocument: chat.useDocument
