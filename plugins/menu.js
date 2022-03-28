@@ -365,7 +365,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160297587-cf1d132c-a045-470f-b805-f8100c3316a9.jpg")).buffer(), text.trim(), '© الغربي ', '.المالك', 'الكل', '.قائمة', m)
+    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160297587-cf1d132c-a045-470f-b805-f8100c3316a9.jpg")).buffer(), text.trim(), '© الغربي ', '.Owner', 'الكل', '.menu', m)
   } catch (e) {
     conn.reply(m.chat, 'اسف, حاول مجددا', m)
     throw e
