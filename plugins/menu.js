@@ -168,7 +168,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `**مرحبا انا  CHIKA FUJIWARA من المطور الــغـــࢪبــي*
+          "title": `**مرحبا انا Kaneki من تطوير الــغـــࢪبــي*
 
 *انستغرام الــغـــࢪبــي*
 *https://instagram.com/azdi_n_1?=nametag*
