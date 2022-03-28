@@ -181,7 +181,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         ║╔╗║║╠╣║╔║║╗
         ╚╝╚╝╚╝╚╝╚══╝
 
-┌─────❲ CHIKA FUJIWARA ❳
+┌─────❲ Kaneki ❳
 ┊☞   ${ucapan()}
 ┊☞ 👤 *اسم* : ${name}
 ┊☞ 🧭 *زمن* : ${time},
@@ -189,7 +189,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 ┊☞ ✅ *تاريخ* : ${date},
 ┊☞ 💝 *المطور* : الغربي
 ┊☞ 🖌️ *اختصار* : متعدد 
-┊☞ ☮️ *اسم البوت* : CHIKA FUJIWARA
+┊☞ ☮️ *اسم البوت* : Kaneki
 └─────────────────⸙ \n\ ______`
           
            .trim(),
@@ -368,7 +368,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160450860-b005ddc6-18bd-41e8-9836-6861cc445f1f.gif")).buffer(), text.trim(), '© الغربي ', '.Owner', 'الكل', '.menu', m)
+    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160474066-dca43a19-e9c7-44b6-9019-8209b8e86619.jpeg")).buffer(), text.trim(), '© الغربي ', '.Owner', 'الكل', '.menu', m)
   } catch (e) {
     conn.reply(m.chat, 'اسف, حاول مجددا', m)
     throw e
