@@ -20,22 +20,22 @@ let handler = async (m, { conn, usedPrefix }) => {
     if (!levelling.canLevelUp(user.level, user.exp, global.multiplier)) {
       let rank = 'https://telegra.ph/file/fd4230902e75d397d8667.jpg'
         {
-          await conn.sendButtonImg(m.chat, await (await fetch(rank)).buffer(), `Level ${name} ${user.level} (${user.exp - min}/${xp})\nNot enough ${max - user.exp} again!`.trim(), '© GHRBYB EVA BOT', 'لفل تلقائي', `${usedPrefix}on autolevelup`, m)
+          await conn.sendButtonImg(m.chat, await (await fetch(rank)).buffer(), `Level ${name} ${user.level} (${user.exp - min}/${xp})\nNot enough ${max - user.exp} again!`.trim(), '© GHRBYB  BOT', 'لفل تلقائي', `${usedPrefix}on autolevelup`, m)
         }
     }
     let before = user.level * 1
     while (levelling.canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
-      let rank = 'https://telegra.ph/file/fd4230902e75d397d8667.jpg'
+      let rank = 'https://user-images.githubusercontent.com/102433984/160474066-dca43a19-e9c7-44b6-9019-8209b8e86619.jpeg'
         {
-          await conn.sendButtonImg(m.chat, await (await fetch(rank)).buffer(), `${name} Level Up!\n_${before}_ -> ${user.level}`.trim(), '© GHRBYB EVA BOT', 'لفل تلقائي', `${usedPrefix}on autolevelup`, m)
+          await conn.sendButtonImg(m.chat, await (await fetch(rank)).buffer(), `${name} Level Up!\n_${before}_ -> ${user.level}`.trim(), '© GHRBYB  BOT', 'لفل تلقائي', `${usedPrefix}on autolevelup`, m)
         }
     }
   }
 }
 
-handler.help = ['levelup']
-handler.tags = ['xp']
+handler.help = ['المستوى']
+handler.tags = ['إكس بي']
 
 handler.command = /^levelup$/i
 
