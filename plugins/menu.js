@@ -168,8 +168,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `*مرحبا بيكم في بوت kanna من تطوير الغربي*,
-┌─────❲ *kanna* ❳
+          "title": `**مرحبا انا  CHIKA FUJIWARA من المطور الــغـــࢪبــي*
+
+*انستغرام الــغـــࢪبــي*
+*https://instagram.com/azdi_n_1?=nametag*
+┌─────❲ *الــغـــࢪبــي* ❳
 ┊
 └─────────────────❋ཻུ۪۪⸙
         
@@ -178,7 +181,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         ║╔╗║║╠╣║╔║║╗
         ╚╝╚╝╚╝╚╝╚══╝
 
-┌─────❲ kanna ❳
+┌─────❲ CHIKA FUJIWARA ❳
 ┊☞   ${ucapan()}
 ┊☞ 👤 *اسم* : ${name}
 ┊☞ 🧭 *زمن* : ${time},
@@ -186,7 +189,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 ┊☞ ✅ *تاريخ* : ${date},
 ┊☞ 💝 *المطور* : الغربي
 ┊☞ 🖌️ *اختصار* : متعدد 
-┊☞ ☮️ *اسم البوت* : kanna
+┊☞ ☮️ *اسم البوت* : CHIKA FUJIWARA
 └─────────────────⸙ \n\ ______`
           
            .trim(),
@@ -197,7 +200,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
             {
               "rows": [
                 {
-                  "title": `GHRBYB `,
+                  "title": `الــغـــࢪبــي `,
                   "description": "اصل البوت",
                   "rowId": ".git"
                 }, {
@@ -297,7 +300,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     // ├ ${_p + command} الالعاب
     // ├ ${_p + command} النقاط
     // ├ ${_p + command} ستيكر
-    // ├ ${_p + command} quotes
+    // ├ ${_p + command} اقتباسات
     // ├ ${_p + command} ادمن
     // ├ ${_p + command} المجموعة
     // ├ ${_p + command} الاشتراك
@@ -365,13 +368,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160297587-cf1d132c-a045-470f-b805-f8100c3316a9.jpg")).buffer(), text.trim(), '© الغربي ', '.Owner', 'الكل', '.menu', m)
+    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160450860-b005ddc6-18bd-41e8-9836-6861cc445f1f.gif")).buffer(), text.trim(), '© الغربي ', '.Owner', 'الكل', '.menu', m)
   } catch (e) {
     conn.reply(m.chat, 'اسف, حاول مجددا', m)
     throw e
   }
 }
-handler.help = ['menu', 'help','القائمة','GHRBYB', '?']
+handler.help = ['menu', 'help','list','GHRBYB', '?']
 handler.tags = ['main']
 handler.command = /^(list|menu|help|millie|bot|\?)$/i
 handler.owner = false
@@ -396,16 +399,16 @@ function clockString(ms) {
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 function ucapan() {
-  const time = moment.tz('Asia/Kolkata').format('HH')
-  res = "صباحو 🌄"
+  const time = moment.tz('Africa/Morocco').format('HH')
+  res = "صباحو الخير 🌄"
   if (time >= 4) {
-    res = "الخير 🌞"
+    res = "صباحو الخير🌞"
   }
   if (time > 10) {
     res = "مساء 🌅"
   }
   if (time >= 15) {
-    res = "الخير 🌆"
+    res = "سير تنعس 🌆"
   }
   if (time >= 18) {
     res = "سير تنعس 🌌"
