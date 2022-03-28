@@ -20,8 +20,8 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems }) => {
 ├ tw = twitter
 ├ wh = whatsapp
 └────
-Can only 1 emoji, pay attention to spaces, don't spam!
-If you want to make a sticker, you can get 2/3 emoji? click http://wa.me/212641427490?text=%23stikeremoji`
+يمكن فقط رمز تعبيري واحد ، انتبه للمساحات ، ممنوع السبام!!
+إذا كنت تريد عمل ملصق ، فيمكنك الحصول على 2/3 رمز تعبيري؟  انقر http://wa.me/212641427490?text=%23stikeremoji`
   if (!args[0]) throw er
 
   let template = (args[0] || '').toLowerCase()
