@@ -400,18 +400,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Africa/Morocco').format('HH')
-  res = "صباحو الخير 🌄"
+  res = "🌄صباح الخير"
   if (time >= 4) {
-    res = "صباحو الخير🌞"
+    res = "🌞صباح الخير"
   }
   if (time > 10) {
-    res = "مساء 🌅"
+    res = "🌅طاب مسائك"
   }
   if (time >= 15) {
-    res = "سير تنعس 🌆"
+    res = "🌆مساء الخير"
   }
   if (time >= 18) {
-    res = "سير تنعس 🌌"
+    res = "🌌مساء الخير"
   }
   return res
 }
