@@ -35,19 +35,19 @@ Someone has used your referral code
     let command_text = `${usedPrefix}ref ${code}`
     let command_link = `wa.me/${conn.user.jid.split('@')[0]}?text=${encodeURIComponent(command_text)}`
     let share_text = `
-Get ${xp_first_time} XP for those who use the link/referral code below
+احصل على ${xp_first_time} XP لأولئك الذين يستخدمون الرابط / رمز الإحالة أدناه
 
-Referal Code: *${code}*
+كود الإحالة: *${code}*
 
 ${command_link}
-`.trim()
+`.
     m.reply(`
-Get ${xp_link_creator} XP for every new user who uses your referral code
-${users[m.sender].ref_count} people have used your referral code
+احصل على ${xp_link_creator} XP لكل مستخدم جديد يستخدم رمز الإحالة الخاص بك
+${users[m.sender].ref_count} استخدم الأشخاص رمز الإحالة الخاص بك
 
-Your referral code: ${code}
+رمز الإحالة الخاص بك: ${code}
 
-Share the link with friends: ${command_link}
+شارك الرابط مع الأصدقاء: ${command_link}
 
 or send a message to a friendwa.me/?text=${encodeURIComponent(share_text)}
 
