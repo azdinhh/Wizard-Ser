@@ -219,7 +219,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break
     default:
       if (!/[01]/.test(command)) throw `
-┌〔 List Opsi 〕${isOwner ? '\n├ anon\n├ antispam\n├ antitroli\n├ autoread\n├ backup\n├ clear\n├ grouponly\n├ nsfw\n├ public\n├ mycontact' : ''}
+┌〔 قائمة أوبسي 〕${isOwner ? '\n├ anon\n├ antispam\n├ antitroli\n├ autoread\n├ backup\n├ clear\n├ grouponly\n├ nsfw\n├ public\n├ mycontact' : ''}
 ├ antilink
 ├ autolevelup
 ├ delete
@@ -229,14 +229,14 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 ├ simi
 ├ welcome
 └────
-Example:
+مثال:
 ${usedPrefix}on welcome
 ${usedPrefix}off welcome
 `.trim()
       throw false
   }
   m.reply(`
-*${type}* successful in *${isEnable ? 'enabl' : 'turnoff'}ed* ${isAll ? 'for this bot' : isUser ? '' : 'for this chat'}
+*${type}* ناجح في *${isEnable ? 'enabl' : 'turnoff'}ed* ${isAll ? 'لهذه الدردشة' : isUser ? '' : 'لهذه الدردشة'}
 `.trim())
 }
 handler.help = ['on', 'off'].map(v => v + ' <opsi>')
