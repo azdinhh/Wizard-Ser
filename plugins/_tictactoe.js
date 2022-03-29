@@ -24,10 +24,10 @@ handler.before = async function (m) {
         }))
         if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
             m.reply({
-                '-3': 'Game has ended',
-                '-2': 'Invalid',
-                '-1': 'Invalid Position',
-                0: 'Invalid Position',
+                '-3': 'انتهت اللعبة',
+                '-2': 'غير صالح',
+                '-1': 'الوظيفة غير صحيحة',
+                0: 'الوظيفة غير صحيحة',
             }[ok])
             return !0
         }
