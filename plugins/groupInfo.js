@@ -19,41 +19,41 @@ let handler = async (m, { conn, participants, groupMetadata, text }) => {
 
         if (text) return m.reply(msToDate(expired - new Date() * 1))
 
-        let caption = `*Information Group*\n
-*ID:* 
+        let caption = `*معلومة مجموعة*\n
+*هوية شخصية:* 
 ${groupMetadata.id}
 
-*Name:* 
+*اسم:* 
 ${groupMetadata.subject}
 
-*Description:* 
+*وصف:* 
 ${groupMetadata.desc}
 
-*Total Member:*
+*إجمالي الأعضاء:*
 ${participants.length} Member
 
-*Group Maker:* 
+*صانع المجموعة:* 
 @${m.chat.split`-`[0]}
 
-*Admin Grup:*
+*مجموعة المشرف:*
 ${listAdmin}
 
-*Bot Settings:*
-${antiLink ? '✅' : '❌'} Anti Link
-${global.db.data.chats[m.chat].delete ? '❌' : '✅'} Anti Delete
-${isBanned ? '✅' : '❌'} Banned
-${descUpdate ? '✅' : '❌'} Deskprisi
-${detect ? '✅' : '❌'} Detect
-${stiker ? '✅' : '❌'} Stiker
-${welcome ? '✅' : '❌'} Welcome
+*إعدادات البوت:*
+${antiLink ? '✅' : '❌'} مانع الارتباط
+${global.db.data.chats[m.chat].حذف ? '❌' : '✅'} مضاد حذف
+${isBanned ? '✅' : '❌'} محظور
+${descUpdate ? '✅' : '❌'} وصف
+${detect ? '✅' : '❌'} يكشف
+${stiker ? '✅' : '❌'} ستيكر
+${welcome ? '✅' : '❌'} أهلا بك
 
-*Bot Message Settings:*
+*إعدادات رسالة الروبوت:*
 Welcome: ${sWelcome}
 Bye: ${sBye}
 Promote: ${sPromote}
 Demote: ${sDemote}
 
-*left:*
+*غادر:*
 ${msToDate(expired - new Date() * 1)}
 `.trim()
         let mentionedJid = groupAdmins.concat([`${m.chat.split`-`[0]}@s.whatsapp.net`])
