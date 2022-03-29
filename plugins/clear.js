@@ -13,21 +13,21 @@ let handler = async (m, { conn, command, args }) => {
     }).catch(console.log)
     else await conn.modifyChat(id, 'mute', -Math.floor(new Date / 1e3) * 1e3 - 1e3).catch(console.log)
   }
-  m.reply(`_*Finished*_`)
+  m.reply(`_*تم الانتهاء من*_`)
 }
 handler.help = [
-  'clearchat',
-  'clearchat chat',
-  'clearchat group',
-  'clearchat all',
-  'deletechat',
-  'deletechat chat',
-  'deletechat group',
-  'deletechat all',
-  'mutechat',
-  'mutechat chat',
-  'mutechat group',
-  'mutechat all'
+  'دردشة واضحة',
+  'دردشة واضحة ',
+  'دردشة واضحة مجموعة',
+  'دردشة واضحة الكل',
+  'حذف الدردشة',
+  'حذف الدردشة ',
+  'حذف الدردشة مجموعة',
+  'حذف الدردشة الكل',
+  'موتشات',
+  'موتشات دردشة',
+  'موتشات مجموعة',
+  'موتشات الكل'
 ]
 handler.tags = ['owner']
 handler.command = /^(clear|delete|mute)chat$/i
