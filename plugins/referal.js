@@ -49,7 +49,7 @@ ${users[m.sender].ref_count} استخدم الأشخاص رمز الإحالة �
 
 شارك الرابط مع الأصدقاء: ${command_link}
 
-or send a message to a friendwa.me/?text=${encodeURIComponent(share_text)}
+أو إرسال رسالة إلى friendwa.me/?text=${encodeURIComponent(share_text)}
 
 ${Object.entries(xp_bonus).map(([count, xp]) => `${count} Person = Bonus ${xp} XP`).join('\n')}
 `.trim())
