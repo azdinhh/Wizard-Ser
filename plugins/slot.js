@@ -1,19 +1,19 @@
 let handler = async (m, { args, usedPrefix, command }) => {
     let fa = `
-Example:
+مثال:
 ${usedPrefix + command} 100
 
-means you bet 100 XP.
+يعني أنك تراهن على 100 XP.
 
-*نايس :* your bet is doubled
+*نايس :* مضاعفة رهانك
 *لست محظوظا:* +1 XP
-*خسرت:* your bet is taken`.trim()
+*خسرت:* تم أخذ رهانك`.trim()
     if (!args[0]) throw fa
     if (isNaN(args[0])) throw fa
     let taruhan = parseInt(args[0])
     let users = global.db.data.users[m.sender]
     let time = users.lastslot + 10000
-    if (new Date - users.lastslot < 10000) throw `wait for ${msToTime(time - new Date())}`
+    if (new Date - users.lastslot < 10000) throw `أنتظر لأجل ${msToTime(time - new Date())}`
     if (taruhan < 1) throw 'Minimum 1 XP!'
     if (users.exp < taruhan) {
         throw `Your XP is not enough!`
@@ -46,7 +46,7 @@ means you bet 100 XP.
         end = `مبروك! 🥳 *+${taruhan + taruhan} XP*`
         users.exp += taruhan
     } else if (a == b || a == c || b == c) {
-        end = `Less fortunate 👍 *+1 XP*`
+        end = `اقل حظا 👍 *+1 XP*`
         users.exp += 1
     } else {
         end = `لقد خسرت😥 *-${taruhan} XP*`
