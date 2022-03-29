@@ -13,9 +13,9 @@ const xp_bonus = {
 let handler = async (m, { conn, usedPrefix, text }) => {
   let users = global.db.data.users
   if (text) {
-    if ('ref_count' in users[m.sender]) throw 'Cannot use referral code!'
+    if ('ref_count' in users[m.sender]) throw 'لا يمكن استخدام رمز الإحالة!'
     let link_creator = (Object.entries(users).find(([, { ref_code }]) => ref_code === text.trim()) || [])[0]
-    if (!link_creator) throw 'Invalid referral code'
+    if (!link_creator) throw 'رمز الإحالة غير صالح'
     let count = users[link_creator].ref_count++
     let extra = xp_bonus[count] || 0
     users[link_creator].exp += xp_link_creator + extra
