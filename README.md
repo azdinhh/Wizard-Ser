@@ -1,7 +1,7 @@
 # بوت الغربي
 
 <div align="center">
-  <img border-radius: 15px src="https://user-images.githubusercontent.com/102433984/160498290-5907367d-f18a-43f0-b308-8926aeb12c49.jpg" width="200" height="200"/>
+  <img border-radius: 15px src="https://user-images.githubusercontent.com/102433984/160944916-7878a248-193f-4104-a8e9-a50ecc5114da.mp4" width="200" height="200"/>
 
 <p align="center">
   <a href="https://instagram.com/azdi_n_1?=nametag"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/> 
