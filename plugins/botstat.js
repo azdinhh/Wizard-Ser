@@ -8,11 +8,11 @@ let handler = async (m, { conn }) => {
     m.reply(`
 ┌─〔 Status 〕
 ├ *${groups.length}* Group
-├ *${chats.length - groups.length}* Private Chat
-├ *${Object.keys(global.db.data.users).length}* Users
+├ *${chats.length - groups.length}* دردشة خاصة
+├ *${Object.keys(global.db.data.users).length}* المستخدمون
 ├ *${conn.blocklist.length}* Blocked
-├ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Banned Chat
-├ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Banned User
+├ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* الدردشة المحظورة
+├ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* مستخدم محظور
 └────
     `.trim())
 }
