@@ -20,7 +20,7 @@ async function handler(m, { command, usedPrefix }) {
         }
         case 'start': {
             if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
-                await this.sendButton(m.chat, '_You are still in anonymous chat, waiting for a partner_', watermark, 'Go out', `${usedPrefix}leave`)
+                await this.sendButton(m.chat, '_أنت لا تزال في محادثة مجهولة ، تنتظر شريكًا', watermark, 'الخروج', `${usedPrefix}leave`)
                 throw false
             }
             let room = Object.values(this.anonymous).find(room => room.state === 'انتظار' && !room.check(m.sender))
@@ -43,7 +43,7 @@ async function handler(m, { command, usedPrefix }) {
                         return who === this.a ? this.b : who === this.b ? this.a : ''
                     },
                 }
-                await this.sendButton(m.chat, '_Waiting partner..._', watermark, 'الخروج', `${usedPrefix}leave`)
+                await this.sendButton(m.chat, 'شريك في الانتظار..._', watermark, 'الخروج', `${usedPrefix}leave`)
             }
             break
         }
