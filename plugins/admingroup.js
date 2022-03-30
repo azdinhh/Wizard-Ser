@@ -19,10 +19,10 @@ let handler = async (m, { conn, participants, groupMetadata, text }) => {
 
         if (text) return m.reply(msToDate(expired - new Date() * 1))
 
-        let caption = `*Admin Group*\n
-*Group Maker:* 
+        let caption = `*مشرف مجموعة*\n
+* صانع مجموعة:* 
 @${m.chat.split`-`[0]}
-*Admin Grup:*
+*مشرف جروب:*
 ${listAdmin}
 `.trim()
         let mentionedJid = groupAdmins.concat([`${m.chat.split`-`[0]}@s.whatsapp.net`])
