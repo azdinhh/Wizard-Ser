@@ -1,7 +1,7 @@
 let handler = async (m, { usedPrefix, command, text, args }) => {
     if (!args || !['add', 'remove'].includes(args[0].toLowerCase())) throw `
-*Use:* ${usedPrefix + command} <add|remove> number,number,...,number
-*Example:*
+*يستخدم:* ${usedPrefix + command} <add|remove> number,number,...,number
+*مثال:*
 ${usedPrefix + command} add 911111111111,12345678901,0
 ${usedPrefix + command} remove 911111111111,12345678901,0
 `.trim()
