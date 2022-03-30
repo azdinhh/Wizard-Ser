@@ -22,122 +22,122 @@ function pickRandom(list) {
 }
 
 global.bucin = [
-  "I choose to be alone, not because I'm waiting for the perfect one, but need someone who never gives up.",
-  "A single person is created with a partner he has not yet found.",
-  "Singles. Maybe it's God's way of saying 'Rest from the wrong love'.",
-  "Singles are young people who prioritize their personal development for a classier love later.",
-  "I'm not looking for someone who is perfect, but I'm looking for someone who becomes perfect thanks to my strengths.",
-  "People's boyfriends are our pending soul mates.",
-  "Singles must pass. Everything has a time, when all loneliness becomes a togetherness with a halal lover. Be patient.",
-  "Romeo was willing to die for juliet, Jack died because he saved Rose. The point is, if you want to live, be single.",
-  "I look for people not from their strengths but I look for people from their sincerity.",
-  "Madmates are not flip-flops, which are often confused. So continue to be in the proper struggle.",
-  "If you become the guitar strings, I don't want to be the guitarist. Because I don't want to dump you.",
-  "If loving you is an illusion, then let me imagine forever.",
-  "Honey... My job is only to love you, not to fight fate.",
-  "When I'm with you it feels like 1 hour is only 1 second, but when I'm away from you it feels like 1 day becomes 1 year.",
-  "Kolak bananas know sumedang, even though the distance stretches my love will never disappear.",
-  "I want to be the only one, not the one.",
-  "I can't promise to be good. But I promise to always be by your side.",
-  "If I become a representative of the people I will definitely fail, how can I think about the people if the only thing on my mind is you.",
-  "Look at my garden, full of flowers. Look at your eyes, my heart is blooming.",
-  "Promise to be with me now, tomorrow, and forever.",
-  "Missing doesnt only arise because of the distance apart But also because of wishes that dont come true",
-  "You will never be far from me, wherever I go you are always there, because you are always in my heart, what is far is only our bodies, not our hearts.",
-  "I know in every glance, we are hindered by distance and time. But I believe that later we will definitely be united.",
-  "Missing you without ever meeting is the same as creating a song that's never been sung.",
-  "There are times when distance is always a barrier between me and you, but still in my heart we are always close.",
-  "If this heart is not able to stem all the longing, what can I do but pray for you.",
-  "Maybe at this moment I can only hold back this longing. Until the time comes when I can meet and release this longing with you.",
-  "Through the turbulent longing in my heart, there sometimes I really need your loving hugs.",
-  "In the cold night, I don't remember anymore; How often I think of you miss you too.",
-  "Missing you is like rain that comes suddenly and lasts a long time. And even after the rain stops, I still miss you.",
-  "Since getting to know you, I want to continue to learn, learn to be the best for you.",
-  "Do you know the difference between a pencil and your face? If you can erase the writing pencil, but if your face nothing will be able to erase it from my mind.",
-  "It's not the National Examination tomorrow that I have to worry about, but the life test I went through after you left me.",
-  "One thing about happiness at school that keeps me motivated is being able to see your smile every day.",
-  "Do you know the difference between going to school and going to your house? If you go to school, you must bring books and pens, but if you go to your house, I just bring my heart and love.",
-  "I'm not sad if tomorrow is Monday, I'm sad if I don't meet you.",
-  "My love moment is perpendicular to your love moment. Make our love a perfect equilibrium point.",
-  "I'm willing to take part in a running race around the world, as long as you are the finish line.",
-  "My homework is to miss you. Stronger than Math, broader than Physics, stronger than Biology.",
-  "My love for you is like a metabolism, which will not stop until death.",
-  "If the jelangkung is like you, come and pick me up, I'll take you home.",
-  "Eat whatever I like as long as it's with you, including eating liver.",
-  "Love is like a death sentence. If you don't get shot, you hang it.",
-  "Loving you is like a drug: once you try to be addicted, you don't try to make yourself curious, leave it to make you addicted.",
-  "I like snacking the most because snacking is delicious. Moreover, having you completely ...",
-  "This world belongs only to the two of us. Everything else is just a contract.",
-  "For me, all those days are Tuesdays. Tuesdays in Heaven when close to you...",
-  "What if we both become a gang of criminals? I stole your heart and you stole mine.",
-  "You are like the coffee I drank this morning. Bitter, but addictive.","I'm often jealous of your lipstick. He can kiss you every day, from morning to night.",
-  "Just hearing your name can make me smile like a fool.",
-  "I know your girlfriend is not the only one, and like you not only me.",
-  "Ever since I stopped wishing on you, I've become unmotivated in everything..",
-  "With you, falling in love is the most intentional heartbreak.",
-  "It's very difficult to feel the happiness of life without you by my side.",
-  "Through the turbulent longing in my heart, there sometimes I really need your loving hugs.",
-  "If you know, until now I still love you.",
-  "Sometimes I'm jealous of kites...the strings just break, they're still being chased and don't want to be taken over by other people...",
-  "I didn't know what love was, until I finally met you. But, at that moment I knew how it felt to be heartbroken.",
-  "Chasing is tiring, but even more tired waiting\nWaiting for you to notice my existence...",
-  "Don't stop loving just because you've been hurt. Because there's no rainbow without rain, there's no true love without tears.",
-  "I have a million reasons to forget you, but nothing can force me to stop loving you.",
-  "Sometimes one feels so stupid just to love someone.",
-  "You are the best heartbreak I've never regretted.",
-  "It's not that it's not worth the wait, it's just that it often gives false hope.",
-  "Part of me hurts, Remembering her so close, yet untouchable.",
-  "The best thing about loving someone is secretly praying for them.",
-  "I wish I could get rid of this feeling as soon as I lost you.",
-  "For the sake of love we deceive ourselves. Trying to be strong turns out to be dishonorable.",
-  "Think of me as your home, if you go you know where to go home. Stay if you want and leave if you are bored...",
-  "I'm confused, should I be disappointed or not? If I'm disappointed, who am I to him?\n\nIf I'm not disappointed, but I'm waiting for his words.",
-  "My longing is like a branch that remains standing. Even though there are no more leaves to accompany it, until it finally dries up, breaks, and dies.",
-  "I guess we're just two strangers now having the same memories.",
-  "Make me hate you even if it's only for a few minutes, so it's not too hard to forget you.",
-  "I love you with all my heart, but you share your feelings with other people.",
-  "Loving you might break me, but somehow leaving you doesn't fix me.",
-  "You are first and foremost in my life. But, I am second to you.",
-  "If we can only meet in a dream, I want to sleep forever.",
-  "Seeing you happy is my happiness, even though your happy without me.",
-  "I sometimes envy an object. It has no taste but is always needed. Unlike me, who has taste, but is abandoned and ignored...",
-  "How can I move if only you my heart stops?",
-  "Memories of you are like home to me. So every time my mind wanders, it will always come back to you.",
-  "Why is tissue useful? Because love never runs dry. - Sujiwo Tejo",
-  "If loving you is a mistake, fine, let me just keep being wrong.",
-  "Ever since I met you, I want to keep learning. Learn to be the best for you.",
-  "Some people act stupid just to see you smile. And he's happy about that.",
-  "I'm not a good person, but will learn to be the best for you.",
-  "We don't die, but it's the wounds that make us unable to walk like we used to.",
-  "Your presence is like a cup of coffee that I need every morning, which can encourage me to stay excited about the day.",
-  "I really want to give the world to you. But since that's not possible, then I will give you the most important thing in my life, which is my world.",
-  "It's better to sing humorously but sweetly, rather than pretending to be romantic but having a tragic ending.",
-  "Ben doesn't end up being disappointed, you have to know when to hope and when to stop.",
-  "I, Ki wong Jowo, don't understand the meaning of I Love U.",
-  "You don't need ayu and sugih, I'm pretty sure wes are happy and crazy.",
-  "My love for your crew is shattered by the camera, focus on your crew is still blurry.",
-  "Saben dino kegowo dreams but can't be stupid.",
-  "Don't meet 30 dinos, I feel like a month.",
-  "I am without you like a cat who lost his rubber. Ambyar.",
-  "I want it, I'm playing games every time. Supoyo I'm iso nemokne kowe lewih hot. Ben Lewih dowo when I'm kanggo urip with your slira.",
-  "I never knew what opo kui tresno was, I just met thanks to your slira.",
-  "Love aa ka neng moal leungit-leungit sanajan aa geus marry deui.",
-  "Your patience is limited, but your love is ka anjeun henteu","Kanyaah, I'm sick of fading eating Bayclean.",
-  "The memories of the endah keur babarengan jeung anjeun ek tuluy are remembered, nepi ka poho.",
-  "You will always breathe alone, you will need a sejen jalmi relief.",
-  "Nyaahna aa, you need tea if the bank clerk is still collecting debts (hayoh mumuntil).",
-  "Urang's patience is the limit, but your love for urang is good for you.",
-  "Hayang I think I'm cursing up the words of love like this in this world, then I'm bade curing kumpulkeun, so that Anjeun nyaho is very big, the love for you is low, Ka Anjeun.",
-  "Calm down wae neng, ari love brother mah sapertos krispatih song; timeless.",
-  "Abdi sanes jalmi nu sampurna pikeun anjeun, sareng sanes oge nu is the best kanggo anjeun.",
-  "It's enough just to lose the network, you don't.",
-  "I'm often made to eat liver. But realizing you're still here makes me happy again.",
-  "My enemies are those who want to have you too.",
-  "Many are always there, but if you're the only one I want, then what?",
-  "My sleeping hours are ruined by longing.",
-  "It's enough that China is far away, don't love us.",
-  "What's important is your happiness, I'm not important ..",
-  "My only wish is to be loved by you...",
-  "Me without you is like an ambulance without wiuw wiuw wiuw.",
-  "It's enough that Antarctica is far away. Not Antarctica."
-]
+  اخترت أن أكون وحدي ، ليس لأنني أنتظر الشخص المثالي ، ولكني بحاجة إلى شخص لا يستسلم أبدًا. "،
+   "شخص واحد مخلوق مع شريك لم يعثر عليه بعد." ،
+   "الفردي. ربما تكون طريقة الله في قول" استرح من الحب الخطأ "." ،
+   "العزاب هم الشباب الذين يعطيون الأولوية لتطورهم الشخصي من أجل الحب الراقي لاحقًا." ،
+   "أنا لا أبحث عن شخص مثالي ، لكني أبحث عن شخص يصبح مثاليًا بفضل نقاط قوتي." ،
+   "أصدقاء الناس هم رفقاء الروح المعلقة." ،
+   "يجب أن يمر العزاب. كل شيء له وقت ، عندما تصبح كل الوحدة تجمعًا مع عاشق حلال. تحلى بالصبر."،
+   "روميو كان على استعداد للموت من أجل جولييت ، مات جاك لأنه أنقذ روز. النقطة المهمة هي ، إذا كنت تريد أن تعيش ، كن أعزب." ،
+   "أنا أبحث عن أشخاص ليس من قوتهم ولكن أبحث عن الناس من صدقهم." ،
+   "الزملاء ليسوا متخبطين ، وغالبًا ما يتم الخلط بينهم. لذا استمروا في النضال المناسب."،
+   "إذا أصبحت أوتار الجيتار ، فأنا لا أريد أن أكون عازف الجيتار. لأنني لا أريد التخلص منك." ،
+   "إذا كان حبك هو وهم ، إذن دعني أتخيل إلى الأبد." ،
+   "حبيبي .. وظيفتي هي أن أحبك فقط ، لا أن أحارب القدر" ،
+   "عندما أكون معك ، أشعر أن ساعة واحدة هي ثانية واحدة فقط ، ولكن عندما أكون بعيدًا عنك ، أشعر وكأن يومًا واحدًا يصبح عامًا واحدًا." ،
+   "كولاك الموز يعرف سوميدانج ، على الرغم من أن المسافة تمتد حبي لن يختفي أبدًا."،
+   "أريد أن أكون الوحيد وليس الوحيد." ،
+   "لا أستطيع أن أعدك بأن أكون جيدًا. لكنني أعدك أن أكون دائمًا بجانبك." ،
+   "إذا أصبحت ممثلاً للناس فسأفشل بالتأكيد ، كيف يمكنني التفكير في الناس إذا كان الشيء الوحيد الذي يدور في ذهني هو أنت." ،
+   "انظر إلى حديقتي المليئة بالورود. انظر إلى عينيك ، قلبي يتفتح" ،
+   "أوعد أن أكون معي الآن وغدًا وإلى الأبد." ،
+   "لا ينشأ الضياع فقط بسبب المسافة المتباعدة ولكن أيضًا بسبب الأمنيات التي لا تتحقق" ،
+   "لن تكون بعيدًا عني أبدًا ، أينما ذهبت ، فأنت دائمًا هناك ، لأنك دائمًا في قلبي ، وما هو بعيد هو أجسادنا فقط ، وليس قلوبنا." ،
+   "أعلم في كل نظرة أن المسافة والوقت يعيقنا. لكنني أعتقد أننا سنكون متحدين بالتأكيد لاحقًا" ،
+   "اشتياقك دون لقاء مطلقًا يشبه إنشاء أغنية لم يتم غنائها مطلقًا." ،
+   "هناك أوقات تكون فيها المسافة دائمًا حاجزًا بيني وبينك ، لكن ما زلنا في قلبي قريبون دائمًا." ،
+   "إذا كان هذا القلب لا يقدر على وقف كل الشوق ، فماذا أفعل إلا أن أصلي من أجلك".
+   "ربما في هذه اللحظة لا يسعني سوى كبح هذا الشوق. حتى يحين الوقت الذي يمكنني أن ألتقي فيه وأطلق هذا الشوق معك." ،
+   "من خلال الشوق المضطرب في قلبي ، هناك أحيانًا أحتاج حقًا إلى عناقك المحب." ،
+   "في الليل البارد ، لم أعد أتذكر ؛ كم مرة أفكر في أنك تشتاق إليك أيضًا." ،
+   "أفتقدك مثل المطر الذي يأتي فجأة ويستمر لفترة طويلة. وحتى بعد توقف المطر ، ما زلت أفتقدك." ،
+   "منذ التعرف عليك ، أريد أن أستمر في التعلم ، وأن أتعلم أن أكون الأفضل لك." ،
+   "هل تعرف الفرق بين قلم الرصاص ووجهك؟ إذا كان بإمكانك محو قلم الكتابة ، ولكن إذا كان وجهك فلن يتمكن أي شيء من محوه من ذهني." ،
+   "لا داعي للقلق بشأن الامتحان الوطني غدًا ، ولكن اختبار الحياة الذي مررت به بعد أن تركتني." ،
+   "شيء واحد عن السعادة في المدرسة يجعلني متحمسًا هو القدرة على رؤية ابتسامتك كل يوم." ،
+   "هل تعرف الفرق بين الذهاب إلى المدرسة والذهاب إلى منزلك؟ إذا ذهبت إلى المدرسة ، يجب عليك إحضار الكتب والأقلام ، ولكن إذا ذهبت إلى منزلك ، فأنا أحضر قلبي وحبي فقط." ،
+   "لست حزينًا إذا كان غدًا يوم الاثنين ، فأنا حزين إذا لم ألتقي بك." ،
+   "لحظة حبي متعامدة مع لحظة حبك. اجعل حبنا نقطة توازن مثالية." ،
+   "أنا على استعداد للمشاركة في سباق جري حول العالم ، طالما أنك خط النهاية." ،
+   "واجبي المنزلي هو أن أفتقدك. أقوى من الرياضيات ، وأوسع من الفيزياء ، وأقوى من علم الأحياء."،
+   "حبي لك مثل التمثيل الغذائي الذي لن يتوقف حتى الموت." ،
+   "إذا كان jelangkung مثلك ، تعال واصطحبني ، سآخذك إلى المنزل." ،
+   "تناول ما يعجبني طالما أنه معك ، بما في ذلك أكل الكبد." ،
+   "الحب مثل حكم الإعدام. إذا لم يتم إطلاق النار عليك ، تعلقه." ،
+   "حبك مثل المخدرات: بمجرد أن تحاول أن تصبح مدمنًا ، لا تحاول أن تجعل نفسك فضوليًا ، اترك الأمر لتجعلك مدمنًا." ،
+   "أحب تناول الوجبات الخفيفة كثيرًا لأن الوجبات الخفيفة لذيذة. علاوة على ذلك ، تناولك تمامًا ..." ،
+   "هذا العالم ملك لنا نحن الاثنين فقط. كل شيء آخر هو مجرد عقد."،
+   "بالنسبة لي ، كل تلك الأيام هي ثلاثاء. الثلاثاء في الجنة عندما تكون قريبًا منك ..." ،
+   "ماذا لو أصبح كلانا عصابة من المجرمين؟ لقد سرقت قلبك وسرقت قلبي." ،
+   "أنت مثل القهوة التي شربتها هذا الصباح. مريرة ، ولكن تسبب الإدمان." ، "غالبًا ما أشعر بالغيرة من أحمر الشفاه الخاص بك. يمكنه تقبيلك كل يوم ، من الصباح إلى المساء." ،
+   "مجرد سماع اسمك يمكن أن يجعلني أبتسم مثل الأحمق." ،
+   "أعلم أن صديقتك ليست الوحيدة ، ومثلك ليس أنا فقط." ،
+   "منذ أن توقفت عن التمني لك ، أصبحت غير متحمس في كل شيء .." ،
+   "معك ، الوقوع في الحب هو أكثر حسرة متعمدة." ،
+   "من الصعب جدًا أن أشعر بسعادة الحياة بدونك بجانبي." ،
+   "من خلال الشوق المضطرب في قلبي ، هناك أحيانًا أحتاج حقًا إلى عناقك المحب." ،
+   "إذا كنت تعلم ، ما زلت أحبك حتى الآن." ،
+   "أحيانًا أشعر بالغيرة من الطائرات الورقية ... الخيوط تنكسر ، ما زالت تتم ملاحقتها ولا أريد أن يستولي عليها الآخرون ..." ،
+   "لم أكن أعرف ما هو الحب ، حتى التقيت بك أخيرًا. لكن في تلك اللحظة عرفت كيف شعرت بالحزن." ،
+   "المطاردة متعبة ، ولكن الانتظار أكثر إرهاقًا \ n في انتظار ملاحظة وجودي ..." ،
+   "لا تتوقف عن الحب لمجرد أنك تعرضت للأذى. لأنه لا يوجد قوس قزح بدون مطر ، لا يوجد حب حقيقي بدون دموع." ،
+   "لدي مليون سبب لنساك ، لكن لا شيء يمكن أن يجبرني على التوقف عن حبك." ،
+   "في بعض الأحيان يشعر المرء بالغباء الشديد لمجرد حب شخص ما." ،
+   "أنت أفضل حسرة لم أندم على الإطلاق".
+   "لا يعني الأمر أن الأمر لا يستحق الانتظار ، إنه فقط أنه يعطي أملًا زائفًا في كثير من الأحيان." ،
+   "جزء مني يؤلمني ، أتذكرها قريبة جدًا ، لكنها لا يمكن المساس بها." ،
+   "أفضل شيء في حب شخص ما هو الدعاء من أجله سراً" ،
+   "أتمنى أن أتخلص من هذا الشعور بمجرد أن أفقدك." ،
+   "من أجل الحب نخدع أنفسنا. محاولة أن نكون أقوياء يتضح أنها عار." ،
+   "اعتبرني بيتك ، إذا ذهبت تعرف إلى أين تذهب إلى المنزل. ابق إذا أردت وغادر إذا كنت تشعر بالملل ..." ،
+   "أنا في حيرة من أملي ، هل يجب أن أصاب بخيبة أمل أم لا؟ إذا كنت محبطًا ، فمن أنا بالنسبة له؟ \ n \ n إذا لم أشعر بخيبة أمل ، لكنني أنتظر كلماته." ،
+   "شوقي مثل الغصن الذي يبقى قائمًا. على الرغم من عدم وجود أوراق أخرى لمرافقته ، حتى يجف في النهاية ويتكسر ويموت." ،
+   "أعتقد أننا مجرد شخصين غريبين لدينا الآن نفس الذكريات." ،
+   "اجعلني أكرهك حتى لو كان ذلك لبضع دقائق فقط ، لذلك ليس من الصعب أن أنساك." ،
+   "أحبك من كل قلبي ، لكنك تشارك مشاعرك مع الآخرين." ،
+   "حبك قد يحطمني ، لكن تركك بطريقة ما لا يصلحني." ،
+   "أنت أولاً وقبل كل شيء في حياتي. لكنني ثاني منك." ،
+   "إذا كان بإمكاننا أن نلتقي في حلم فقط ، فأنا أريد أن أنام إلى الأبد." ،
+   "سعادتي هي رؤيتك سعيدة ، على الرغم من سعادتك بدوني." ،
+   "أحيانًا أحسد شيئًا ما. ليس له طعم ولكن هناك حاجة دائمًا إليه. بعكس الذي لديه ذوق ، ولكن يتم التخلي عنه وتجاهله ..." ،
+   "كيف يمكنني أن أتحرك فقط إذا توقف قلبي أنت؟" ،
+   "ذكرياتك مثل الوطن بالنسبة لي. لذلك في كل مرة يشرد فيها ذهني ، سيعود إليك دائمًا." ،
+   "لماذا الأنسجة مفيدة؟ لأن الحب لا يجف أبدا. - سوجيو تيجو" ،
+   "إذا كان حبك خطأ ، حسنًا ، دعني أظل مخطئًا." ،
+   "منذ أن قابلتك ، أريد أن أستمر في التعلم. تعلم أن تكون الأفضل لك." ،
+   "بعض الناس يتصرفون بغباء لمجرد رؤيتك تبتسم. وهو سعيد بذلك." ،
+   "أنا لست شخصًا جيدًا ، لكني سأتعلم أن أكون الأفضل لك." ،
+   "نحن لا نموت ، لكن الجروح هي التي تجعلنا غير قادرين على المشي كما اعتدنا".
+   "إن وجودك مثل فنجان القهوة الذي أحتاجه كل صباح ، والذي يمكن أن يشجعني على أن أبقى متحمسًا لليوم." ،
+   "أريد حقًا أن أعطي العالم لك. ولكن بما أن هذا غير ممكن ، فسأقدم لك أهم شيء في حياتي ، وهو عالمي." ،
+   "من الأفضل أن تغني بروح الدعابة ولكن بلطف ، بدلاً من التظاهر بالرومانسية مع نهاية مأساوية."،
+   "بن لا ينتهي بخيبة أمل ، عليك أن تعرف متى تأمل ومتى تتوقف." ،
+   "أنا ، كي وونغ جوو ، لا أفهم معنى أنا أحب يو" ،
+   "لست بحاجة إلى ayu و sugih ، أنا متأكد من أننا سعداء ومجنون." ،
+   "حطمت الكاميرا حبي لطاقمك ، والتركيز على طاقمك لا يزال ضبابيًا."،
+   "Saben dino kegowo أحلام ولكن لا يمكن أن تكون غبية." ،
+   "لا تقابل 30 دينار ، أشعر وكأنني شهر." ،
+   "أنا بدونك مثل القط الذي فقد مطاطه. أمبيار." ،
+   "أريدها ، أنا ألعب الألعاب في كل مرة. Supoyo أنا iso nemokne kowe lewih hot. Ben Lewih dowo when I'm kanggo urip with your slira."،
+   "لم أكن أعرف أبدًا ما هو opo kui tresno ، لقد التقيت للتو بفضل سليرا الخاصة بك." ،
+   "Love aa ka neng moal leungit-leungit sanajan aa geus marry deui." ،
+   "صبرك محدود ، لكن حبك هو ka anjeun henteu" ، "Kanyaah ، لقد سئمت من تلاشي أكل Bayclean." ،
+   "ذكريات Endah keur babarengan jeung anjeun ek tuluy في الذاكرة ، nepi ka poho." ،
+   "سوف تتنفس دائمًا بمفردك ، وستحتاج إلى راحة sejen jalmi." ،
+   "Nyaahna aa ، تحتاج الشاي إذا كان كاتب البنك لا يزال يقوم بتحصيل الديون (هايو مومونتيل)." ،
+   "صبر أورانج هو الحد الأقصى ، لكن حبك للأورانج جيد لك." ،
+   "أعتقد أن Hayang أشتم كلمات الحب مثل هذه في هذا العالم ، ثم أقوم بمعالجة kumpulkeun ، بحيث يكون Anjeun nyaho كبيرًا جدًا ، والحب لك منخفض ، Ka Anjeun." ،
+   "اهدأ واي نينغ ، أغنية آري لأخو الحب ماه سابيرتوس كرسباتيه ؛ خالدة." ،
+   "عبدي سانز جالمي نو سامبورنا بايكون أنجيون ، سارينج سانز أوغي نو هو أفضل كانج جو أنجيون." ،
+   "يكفي أن تفقد الشبكة فقط ، فأنت لا تفعل ذلك." ،
+   "غالبًا ما أجعلني أتناول الكبد. لكن إدراك أنك ما زلت هنا يجعلني سعيدًا مرة أخرى." ،
+   "أعدائي هم أولئك الذين يريدون أن يكون لك أيضًا." ،
+   "هناك الكثير دائمًا ، ولكن إذا كنت الشخص الوحيد الذي أريده ، فماذا بعد؟" ،
+   "ساعات نومي يفسدها الشوق" ،
+   "يكفي أن الصين بعيدة ، لا تحبونا" ،
+   "المهم هو سعادتك ، أنا غير مهم .." ،
+   "أمنيتي الوحيدة هي أن تحبك ..." ،
+   "أنا بدونك مثل سيارة إسعاف بدون wiuw wiuw wiuw." ،
+   "يكفي أن القارة القطبية الجنوبية بعيدة. وليس القارة القطبية الجنوبية."
+ ]
