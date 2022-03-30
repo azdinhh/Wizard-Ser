@@ -11,8 +11,8 @@ handler.all = async function (m) {
     if (new Date - user.pc < 86400000) return // setiap 24 jam sekali
     await this.sendButton(m.chat, `
 Hai, ${ucapan()}
-${user.banned ? 'you are banned' : 'انا الــغـــࢪبــي,  ممنوع السبام/call/ask to save to this number. Can I help you?, Type .menu To Get Bot Menu}
-`.trim(), watermark, user.banned ? 'Bot Owner' : 'Menu', user.banned ? '.owner' : '.?', m)
+${user.banned ? 'انت محظور' : 'انا الــغـــࢪبــي,  ممنوع السبام/يتصل/ask للحفظ في هذا الرقم. أيمكنني مساعدتك?, اكتب .menu }
+`.trim(), watermark, user.محظور ? 'Bot Owner' : 'Menu', المستخدم ? '.owner' : '.?', m)
     user.pc = new Date * 1
 }
 
