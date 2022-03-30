@@ -29,7 +29,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
     let txt = text.replace('@' + who.split`@`[0], '').trim()
     if (!txt) {
-        conn.reply(m.chat, fail, m, { contextInfo: { mentionedJid: ['918113921898@s.whatsapp.net'] } })
+        conn.reply(m.chat, fail, m, { contextInfo: { mentionedJid: ['212641427490@s.whatsapp.net'] } })
         throw false
     }
     if (isNaN(txt)) throw 'only numbers'
@@ -43,8 +43,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     users[m.sender].limit -= limit
     users[who].limit += poin
 
-    m.reply(`(${-poin} Limit) + (${-pjk} Limit (Tax 2%)) = ( ${-limit} Limit)`)
-    conn.fakeReply(m.chat, `+${poin} Limit`, who, m.text)
+    m.reply(`(${-poin} Limit) + (${-pjk} حد (Tax 2%)) = ( ${-limit} Limit)`)
+    conn.fakeReply(m.chat, `+${poin} حد`, who, m.text)
 }
 handler.help = ['paylimit @user <amount>']
 handler.tags = ['xp']
