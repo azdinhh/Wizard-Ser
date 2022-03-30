@@ -1,9 +1,9 @@
 let handler = async (m, { conn, text }) => {
 
 let [nomor, pesan, jumlah] = text.split('|')
-if (!nomor) throw 'Please enter the number to be spammed'
-if (!pesan) throw 'Please enter the message to be sent'
-if (jumlah && isNaN(jumlah)) throw 'Amount must be a number!'
+if (!nomor) throw 'الرجاء إدخال الرقم الذي سيتم إرسال بريد عشوائي إليه'
+if (!pesan) throw 'الرجاء إدخال الرسالة المراد إرسالها
+if (jumlah && isNaN(jumlah)) throw 'يجب أن يكون المبلغ رقمًا!'
 
   let fixedNumber = nomor.replace(/[-+<>@]/g, '').replace(/ +/g, '').replace(/^[0]/g, '62') + '@s.whatsapp.net'
   let fixedJumlah = jumlah ? jumlah * 1 : 10
