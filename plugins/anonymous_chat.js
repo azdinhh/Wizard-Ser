@@ -1,7 +1,7 @@
 const { MessageType } = require("@adiwajshing/baileys")
 
 async function handler(m, { command, usedPrefix }) {
-    if (!global.db.data.settings.anon) throw `This feature is not active`
+    if (!global.db.data.settings.anon) throw `هذه الميزة غير نشطة`
     command = command.toLowerCase()
     this.anonymous = this.anonymous ? this.anonymous : {}
     switch (command) {
