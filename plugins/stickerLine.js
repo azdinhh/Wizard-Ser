@@ -4,8 +4,8 @@ const { sticker } = require('../lib/sticker')
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 
-    if (!args[0]) throw `uhm.. where is the url?\n\nexample:\n${usedPrefix + command} https://store.line.me/stickershop/product/`
-    if (!args[0].match(/(https:\/\/store.line.me\/stickershop\/product\/.*)/gi)) throw `url salah`
+    if (!args[0]) throw `أوم .. أين عنوان url?\n\nexample:\n${usedPrefix + command} https://store.line.me/stickershop/product/`
+    if (!args[0].match(/(https:\/\/store.line.me\/stickershop\/product\/.*)/gi)) throw `الــغـــࢪبــي`
 
     let res = await fetch(global.API('zeks', '/api/linesticker', { link: args[0] }, 'apikey'))
     if (!res.ok) throw eror
@@ -21,12 +21,12 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         await conn.sendMessage(m.chat, stiker, MessageType.sticker)
         await delay(1500)
     }
-    m.reply('_*Finished*_')
+    m.reply('_*تم الانتهاء من*_')
 
 }
 handler.help = ['stikerline <url>']
 handler.tags = ['sticker']
-handler.command = /^(stic?kerline)$/i
+handler.command = /^(sticic?kerline)$/i
 
 handler.limit = true
 
