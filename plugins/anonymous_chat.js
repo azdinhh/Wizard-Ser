@@ -5,16 +5,16 @@ async function handler(m, { command, usedPrefix }) {
     command = command.toLowerCase()
     this.anonymous = this.anonymous ? this.anonymous : {}
     switch (command) {
-        case 'next':
-        case 'leave': {
+        case 'التالي':
+        case 'غادر': {
             let room = Object.values(this.anonymous).find(room => room.check(m.sender))
             if (!room) {
-                await this.sendButton(m.chat, '_You are not in anonymous chat_', watermark, 'Find Partner', `${usedPrefix}start`)
+                await this.sendButton(m.chat, '_أنت لست في محادثة مجهولة_', watermark, 'ابحث عن شريك', `${usedPrefix}start`)
                 throw false
             }
-            m.reply('_Ok_')
+            m.reply('_نعم_')
             let other = room.other(m.sender)
-            if (other) await this.sendButton(other, '_Partner left chat_', watermark, 'Find Partner', `${usedPrefix}start`)
+            if (other) await this.sendButton(other, '_غادر الشريك الدردشة_', watermark, 'ابحث عن شريك', `${usedPrefix}start`)
             delete this.anonymous[room.id]
             if (command === 'leave') break
         }
@@ -23,19 +23,19 @@ async function handler(m, { command, usedPrefix }) {
                 await this.sendButton(m.chat, '_You are still in anonymous chat, waiting for a partner_', watermark, 'Go out', `${usedPrefix}leave`)
                 throw false
             }
-            let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
+            let room = Object.values(this.anonymous).find(room => room.state === 'انتظار' && !room.check(m.sender))
             if (room) {
-                await this.sendButton(room.a, '_Partner found!_', watermark, 'Next', `${usedPrefix}next`)
+                await this.sendButton(room.a, '_تم العثور على الشريك!_', watermark, 'التالي', `${usedPrefix}next`)
                 room.b = m.sender
                 room.state = 'CHATTING'
-                await this.sendButton(room.b, '_Partner Found_', watermark, 'Next', `${usedPrefix}next`)
+                await this.sendButton(room.b, '_تم العثور على الشريك_', watermark, 'التالي', `${usedPrefix}next`)
             } else {
                 let id = + new Date
                 this.anonymous[id] = {
                     id,
                     a: m.sender,
                     b: '',
-                    state: 'WAITING',
+                    state: 'انتظار',
                     check: function (who = '') {
                         return [this.a, this.b].includes(who)
                     },
@@ -43,7 +43,7 @@ async function handler(m, { command, usedPrefix }) {
                         return who === this.a ? this.b : who === this.b ? this.a : ''
                     },
                 }
-                await this.sendButton(m.chat, '_Waiting partner..._', watermark, 'Go out', `${usedPrefix}leave`)
+                await this.sendButton(m.chat, '_Waiting partner..._', watermark, 'الخروج', `${usedPrefix}leave`)
             }
             break
         }
