@@ -3,10 +3,10 @@ let handler = async (m, { conn, command, text }) => {
   if (type == '') {
     if (text) {
       conn.menu = text
-      conn.reply(m.chat, 'Menu successfully set\n' + info, m)
+      conn.reply(m.chat, 'تم تعيين القائمة بنجاح\n' + info, m)
     } else {
       conn.menu = {}
-      conn.reply(m.chat, 'Menu reset', m)
+      conn.reply(m.chat, 'إعادة تعيين القائمة', m)
     }
   } else {
     conn.menu = typeof conn.menu == 'object' ? conn.menu : {}
