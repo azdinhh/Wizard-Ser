@@ -1,6 +1,6 @@
 let pajak = 0.02
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    let fail = `this command to give limit to other users\n\nexample:\n${usedPrefix + command} @212641427490 10\nor reply to doi's message with the command: ${usedPrefix + command} 10`
+    let fail = `هذا الأمر لإعطاء الحد للآخرين users\n\nexample:\n${usedPrefix + command} @212641427490 10\nor  الرد على رسالة دوي بالأمر: ${usedPrefix + command} 10`
     let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
     else who = m.chat
