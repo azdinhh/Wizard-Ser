@@ -13,7 +13,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
     conn.sendButton(res.gid, `
 *${conn.user.name}* هو روبوت واتس اب مبني باستخدام Nodejs, *${conn.user.name}* بدعوة من @${m.sender.split`@`[0]}
     
-type *${usedPrefix}menu* to see a list of commands`.trim(), watermark, 'Menu', `${usedPrefix}?`, 0, { contextInfo: { mentionedJid: [m.sender] } })
+اكتب *${usedPrefix}menu* لرؤية قائمة الأوامر`.trim(), watermark, 'Menu', `${usedPrefix}?`, 0, { contextInfo: { mentionedJid: [m.sender] } })
 }
 handler.help = ['join <chat.whatsapp.com>']
 handler.tags = ['']
