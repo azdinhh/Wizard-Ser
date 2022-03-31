@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 *${usedPrefix}تصويت مؤيِّد* - بالتأكيد
 *${usedPrefix}تكريس* - لا
 *${usedPrefix}التصويت* - للتحقق من التصويت
-*${usedPrefix}حذف الحضور* - لحذف الأصوات`, '© الــغـــࢪبــي', 'التصويت', `${usedPrefix}upvote`, 'ديفو', `${usedPrefix}تكريس`)
+*${usedPrefix}حذف الحضور* - لحذف الأصوات`, '© الــغـــࢪبــي', 'التصويت', `${usedPrefix}تصويت مؤيِّد`, 'ديفو', `${usedPrefix}تكريس`)
     conn.vote[id] = [
         text,
         [],
