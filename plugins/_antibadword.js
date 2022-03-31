@@ -11,14 +11,14 @@ handler.before = function (m, { isOwner, isBotAdmin }) {
 
     if (!chat.antiBadword && !chat.isBanned && isBadword) {
         user.warning += 1
-        this.send2Button(m.chat, `*Bad words detected!*
-Warning: ${user.warning} / 5
-If the warning reaches 5 you will be banned
+        this.send2Button(m.chat, `*تم الكشف عن كلمات سيئة!*
+تحذير: ${user.warning} / 5
+إذا وصل التحذير إلى 5 ، فسيتم حظرك
 
-type *#on antibadword* to turn on antibadword
-type *#sorry* to reduce the warning
+اكتب *#on antibadword* لتشغيل antibadword
+اكتب *#sorry* لتقليل التحذير
 
-"Never use a big word when a little filthy one will do" (Wizard-Ser).`, watermark, 'Turn on Antibadword', ',1 antibadword',  'sorry', m)
+"لا تستخدم أبدًا كلمة كبيرة عندما تفعل كلمة قذرة صغيرة" (Wizard-Ser).`, watermark, 'ثم بتشغيل Antibadword', ',1 antibadword',  'آسف', m)
         if (user.warning >= 5) {
             user.banned = true
             if (m.isGroup) {
