@@ -22,12 +22,12 @@ let handler = async (m, { usedPrefix, command }) => {
     if (/msg/i.test(command)) fltr = split.filter(v => v.message.conversation).map(v => '├ ' + v.nama).join('\n')
     if (/img/i.test(command)) fltr = split.filter(v => v.message.imageMessage).map(v => '├ ' + v.nama).join('\n')
     m.reply(`
-┌〔MESSAGE LIST 〕
+┌〔قائمة الرسائل 〕
 ${fltr}
 └────
-Access/fetch by typing:
+وصول/الجلب عن طريق الكتابة:
 *${usedPrefix}get${which}* <name>
-or directly without orders
+أو مباشرة بدون أوامر
 `.trim())
 }
 handler.help = ['vn', 'msg', 'video', 'gif', 'audio', 'img', 'sticker'].map(v => 'list' + v)
