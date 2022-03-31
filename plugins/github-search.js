@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { text, command, usedPrefix }) => {
-    if (!text) throw `Example:\n${usedPrefix + command} Eva`
+    if (!text) throw `مثال:\n${usedPrefix + command} Eva`
     let res = await fetch(global.API('https://api.github.com', '/search/repositories', {
         q: text
     }))
@@ -10,12 +10,12 @@ let handler = async (m, { text, command, usedPrefix }) => {
         return `
 ${1 + index}. *${repo.full_name}*${repo.fork ? ' (fork)' : ''}
 _${repo.html_url}_
-_Created on *${formatDate(repo.created_at)}*_
-_Last update on *${formatDate(repo.updated_at)}*_
+_تم إنشاؤها على *${formatDate(repo.created_at)}*_
+_آخر تحديث بتاريخ *${formatDate(repo.updated_at)}*_
 👁  ${repo.watchers}   🍴  ${repo.forks}   ⭐  ${repo.stargazers_count}
 ${repo.open_issues} Issue${repo.description ? `
-*Description:*\n${repo.description}` : ''}
-*Clone:* \`\`\`$ git clone ${repo.clone_url}\`\`\`
+*وصف:*\n${repo.description}` : ''}
+*استنساخ:* \`\`\`$ git clone ${repo.clone_url}\`\`\`
 `.trim()
     }).join('\n\n')
     m.reply(str)
