@@ -18,7 +18,7 @@ handler.before = function (m, { isOwner, isBotAdmin }) {
 اكتب *#on antibadword* لتشغيل antibadword
 اكتب *#sorry* لتقليل التحذير
 
-"لا تستخدم أبدًا كلمة كبيرة عندما تفعل كلمة قذرة صغيرة" (Wizard-Ser).`, watermark, 'ثم بتشغيل Antibadword', ',1 antibadword',  'آسف', m)
+"لا تستخدم أبدًا كلمة كبيرة عندما تفعل كلمة قذرة صغيرة" (الــغـــࢪبــي).`, watermark, 'ثم بتشغيل Antibadword', ',1 antibadword',  'آسف', m)
         if (user.warning >= 5) {
             user.banned = true
             if (m.isGroup) {
