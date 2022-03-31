@@ -4,10 +4,10 @@ const tld = 'ar'
 
 let handler = async (m, { args, usedPrefix, command }) => {
     let err = `
-EXAMPLE:
+مثال:
 ${usedPrefix + command} <اللغة> [text]
-${usedPrefix + command} id your messages
-List of supported languages: https://cloud.google.com/translate/docs/languages
+${usedPrefix + command} معرف رسائلك
+معرف رسائلك: https://cloud.google.com/translate/docs/languages
 `.trim()
 
     let lang = args[0]
