@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
-  if (!text) throw `uhm.. which number?\nexample:\n\n${usedPrefix + command + ' ' + global.owner[0]}`
+  if (!text) throw `أوم .. أي رقم?\nمثال:\n\n${usedPrefix + command + ' ' + global.owner[0]}`
   let _participants = participants.map(user => user.jid)
   let users = (await Promise.all(
     text.split(',')
@@ -12,7 +12,7 @@ let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
       ])
   )).filter(v => v[1]).map(v => v[0] + '@c.us')
   let response = await conn.groupAdd(m.chat, users)
-  if (response[users] == 408) throw `_Failed!_\n\nThe number has been dialed recently\nCan only enter via *${usedPrefix}link* grup`
+  if (response[users] == 408) throw `_باءت بالفشل!_\n\nتم الاتصال بالرقم مؤخرًا\nلا يمكن الدخول إلا عبر *${usedPrefix}رابط* مجموعة`
   let pp = await conn.getProfilePicture(m.chat).catch(_ => false)
   let jpegThumbnail = pp ? await (await fetch(pp)).buffer() : false
   for (let user of response.participants.filter(user => Object.values(user)[0].code == 403)) {
@@ -20,13 +20,13 @@ let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
       invite_code,
       invite_code_exp
     }]] = Object.entries(user)
-    let teks = `Inviting @${jid.split`@`[0]} using invitation...`
+    let teks = `تم دعوته @${jid.split`@`[0]} باستخدام الدعوة...`
     m.reply(teks, null, {
       contextInfo: {
         mentionedJid: conn.parseMention(teks)
       }
     })
-    await conn.sendGroupV4Invite(m.chat, jid, invite_code, invite_code_exp, false, 'Invitation to join my WhatsApp group', jpegThumbnail ? {
+    await conn.sendGroupV4Invite(m.chat, jid, invite_code, invite_code_exp, false, 'دعوة للانضمام إلى مجموعة واتساب الخاصة بي', jpegThumbnail ? {
       jpegThumbnail
     } : {})
   }
@@ -44,7 +44,7 @@ handler.admin = true
 handler.botAdmin = true
 
 handler.fail = null
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
 
