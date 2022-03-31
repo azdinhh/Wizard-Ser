@@ -1,8 +1,8 @@
 const fetch = require('node-fetch')
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `uhm.. what's the title?\n\nExample:\n${usedPrefix + command} Bad Guy`
-    if (isUrl(text)) throw `uhm.. your title doesn't use url\n\nexample:\n${usedPrefix + command} Bad Guy`
+    if (!text) throw `اه .. ما هو العنوان?\n\nمثال:\n${usedPrefix + command} sad boy`
+    if (isUrl(text)) throw `اه .. لقبك لا يستخدم رابط\n\nمثال:\n${usedPrefix + command} sad boy`
 
     let res = await fetch(global.API('codefinder', '/download/joox', { search: text }, 'apikey'))
     if (!res.ok) throw await `${res.status} ${res.statusText}`
@@ -10,13 +10,13 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!json.status) throw json
     let { judul, artist, album, img_url, mp3_url, filesize, duration } = json.result
     let pesan = `
-Title: ${judul}
-Artist: ${artist}
-Album: ${album}
-File Size: ${filesize}
-Duration: ${duration}
+لقب: ${judul}
+فنان: ${artist}
+البوم: ${album}
+حجم الملف: ${filesize}
+مدة: ${duration}
 
-© Ammu
+© الــغـــࢪبــي
     `.trim()
 
     conn.sendFile(m.chat, img_url, 'eror.jpg', pesan, m, 0, { thumbnail: await (await fetch(img_url)).buffer() })
