@@ -2,7 +2,7 @@
 // https://github.com/TOXIC-DEVIL
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args || !args[0] || args.length === 0) throw `uhm.. which number?\n\nexample:\n${usedPrefix + command} 919539102851`
+    if (!args || !args[0] || args.length === 0) throw `أوم .. أي رقم?\n\nمثال:\n${usedPrefix + command} 21241427490`
     if (args[0].startsWith('0')) throw 'Use Country code!'
     let user = await conn.isOnWhatsApp(args[0])
     let exists = user && user.exists ? true : false
@@ -15,21 +15,21 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         }
         if (user.jid in global.db.data.users) isInDatabase = true
         let str = ` 
-*Name:* ${conn.getName(user.jid)}
-*Number:* ${splitM(user.jid)}
-*Mention:* ${toM(user.jid)}
-*Api:* wa.me/${splitM(user.jid)}
-*Jid:* ${user.jid}
-*Whatsapp Bussines:* ${user.isBusiness ? 'Yes' : 'No'}
-*Di Database:* ${isInDatabase ? 'Yes' : 'No'}
-*Same Group With BOT:* ${sameGroup.length} *Group*
+*اسم:* ${conn.getName(user.jid)}
+*رقم:* ${splitM(user.jid)}
+*أشير:* ${toM(user.jid)}
+*أبي:* wa.me/${splitM(user.jid)}
+*جد:* ${user.jid}
+*واتساب اعمال:* ${user.isBusiness ? 'نعم' : 'لا'}
+*Di Database:* ${isInDatabase ? 'نعم : 'لا'}
+*نفس المجموعة مع بوت:* ${sameGroup.length} *مجموعة*
 `.trim()
         m.reply(str, m.chat, {
             contextInfo: {
                 mentionedJid: conn.parseMention(str)
             }
         })
-    } else throw 'unregistered number'
+    } else throw 'رقم غير مسجل'
 }
 
 handler.help = ['scan'].map(v => v + ' [number]')
