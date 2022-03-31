@@ -11,11 +11,11 @@ let handler = async (m, { conn, text }) => {
 		var number = text
   }
 
-  if(!text && !m.quoted) return conn.reply(m.chat, `*Tag the user, write the number, or reply to the member you want to _warning_*`, m)
+  if(!text && !m.quoted) return conn.reply(m.chat, `*ضع علامة على المستخدم أو اكتب الرقم أو قم بالرد على العضو الذي تريد تحذيره*`, m)
   //let exists = await conn.isOnWhatsApp(number)
-  // if (exists) return conn.reply(m.chat, `*Nomor target tidak terdaftar di WhatsApp*`, m)
-  if(isNaN(number)) return conn.reply(m.chat, `*The number you entered is invalid !*`, m)
-  if(number.length > 15) return conn.reply(m.chat, `*The number you entered is invalid!*`, m)
+  // if (exists) return conn.reply(m.chat, `*الرقم المستهدف غير مسجل على واتساب*`, m)
+  if(isNaN(number)) return conn.reply(m.chat, `*الرقم الذي أدخلته غير صالح !*`, m)
+  if(number.length > 15) return conn.reply(m.chat, `*الرقم الذي أدخلته غير صالح!*`, m)
   try {
 		if(text) {
 			var user = number + '@s.whatsapp.net'
@@ -56,13 +56,13 @@ let handler = async (m, { conn, text }) => {
 	global.DATABASE.data.users[user].warning += 1
 	var warn = global.DATABASE.data.users[user].warning
  	if(warn > 4) {
- 		conn.reply(m.chat, `*❏ WARNING*\n\nYou've been warned 5 times! Just kick it!`, null, {contextInfo: {
+ 		conn.reply(m.chat, `*❏ تحذير*\n\nلقد تم تحذيرك 5 مرات! سيتم طردك !`, null, {contextInfo: {
           mentionedJid: [user]
  	}}).then(() => {
  		conn.groupRemove(m.chat, [user])
  	})
  } else {
- 	conn.reply(m.chat, `*❏ WARNING*\n\n@${number} : [ ${warn} / 5 ]\n\nIf you get a warning up to 5 times, you will be automatically kicked !\n\nType *.delwarn* to delete the warning by paying the limit`, null, {contextInfo: {
+ 	conn.reply(m.chat, `*❏ تحذير*\n\n@${number} : [ ${warn} / 5 ]\n\nإذا تلقيت تحذيرًا حتى 5 مرات, سيتم طردك تلقائيًا !\n\nType *.delwarn* لحذف التحذير بدفع الحد الأقصى`, null, {contextInfo: {
           mentionedJid: [user]
  	}})
 }
