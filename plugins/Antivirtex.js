@@ -9,7 +9,7 @@ handler.before = function(m, { text }) {
   let users = m.sender
 
     if (m.text > نحويك)(m.text > قحبة)(m.text > زامل)(m.text > xnxx) {
-  this.reply(m.chat, '*「 إحترام قونين 」*\n\nمكتشف *${username}* أرسل رابط Virtex!\n\nآسف سوف يتم طردك من هذه المجموعة!', m)
+  this.reply(m.chat, '*「 إحترام قونين 」*\n\تم إكتشاف سب *${username}* أرسل رابط Virtex!\n\nآسف سوف يتم طردك من هذه المجموعة!', m)
      this.groupRemove(m.chat, [users])
   }
 }
