@@ -18,8 +18,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 *اسم:* ${conn.getName(user.jid)}
 *رقم:* ${splitM(user.jid)}
 *أشير:* ${toM(user.jid)}
-*أبي:* wa.me/${splitM(user.jid)}
-*جد:* ${user.jid}
+*Api:* wa.me/${splitM(user.jid)}
+*Jid:* ${user.jid}
 *واتساب اعمال:* ${user.isBusiness ? 'نعم' : 'لا'}
 *Di Database:* ${isInDatabase ? 'نعم : 'لا'}
 *نفس المجموعة مع بوت:* ${sameGroup.length} *مجموعة*
