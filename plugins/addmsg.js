@@ -2,12 +2,12 @@ let { WAMessageProto } = require('@adiwajshing/baileys')
 let handler = async (m, { command, usedPrefix, text }) => {
     let M = WAMessageProto.WebMessageInfo
     let which = command.replace(/add/i, '')
-    if (!m.quoted) throw 'reply to the message!'
-    if (!text) throw `use *${usedPrefix}list${which}* to see the list`
+    if (!m.quoted) throw 'الرد على الرسالة!'
+    if (!text) throw `استعمال *${usedPrefix}list${which}* لرؤية القائمة`
     let msgs = global.db.data.msgs
-    if (text in msgs) throw `'${text}' registered in the message list`
+    if (text in msgs) throw `'${text}' مسجلة في قائمة الرسائل`
     msgs[text] = M.fromObject(await m.getQuotedObj()).toJSON()
-    m.reply(`Successfully added message in message list as '${text}'
+    m.reply(`تمت إضافة الرسالة بنجاح في قائمة الرسائل كـ '${text}'
     
 Access with ${usedPrefix}get${which} ${text}`)
 }
