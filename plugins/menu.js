@@ -74,7 +74,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'كروب') tags = {
     'group': 'Grup'
   }
-  if (teks == 'premium') tags = {
+  if (teks == 'الممتازة') tags = {
     'premium': 'Premium'
   }
   if (teks == 'صانع الفيديو') tags = {
@@ -86,28 +86,28 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'دردشة مجهولة') tags = {
     'anonymous': 'Anonymous Chat'
   }
-  if (teks == 'nulis') tags = {
+  if (teks == 'نوليس') tags = {
     'nulis': 'MagerNulis & Logo'
   }
-  if (teks == 'downloader') tags = {
+  if (teks == 'تنزيل') tags = {
     'downloader': 'Downloader'
   }
-  if (teks == 'tools') tags = {
+  if (teks == 'أدوات') tags = {
     'tools': 'Tools'
   }
   if (teks == 'fun') tags = {
     'fun': 'Fun'
   }
-  if (teks == 'anime') tags = {
+  if (teks == 'انمي') tags = {
     'anime': 'Anime'
   }
-  if (teks == 'database') tags = {
+  if (teks == 'قاعدة البيانات') tags = {
     'database': 'Database'
   }
-  if (teks == 'audio') tags = {
+  if (teks == 'اوديو') tags = {
     'audio': 'Voice Changer'
   }
-  if (teks == 'vote') tags = {
+  if (teks == 'تصويت') tags = {
     'vote': 'Voting',
     'absen': 'Absen'
   }
