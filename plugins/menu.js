@@ -54,62 +54,62 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     '': 'No Category',
   }
   if (teks == 'game') tags = {
-    'game': 'الالعاب'
+    'game': 'Game'
   }
   if (teks == 'xp') tags = {
-    'xp': 'إكسب & حد'
+    'xp': 'Exp & Limit'
   }
   if (teks == 'stiker') tags = {
-    'sticker': 'ستكرز'
+    'sticker': 'Stiker'
   }
   if (teks == 'shell') tags = {
-    'shell': 'قذائف السحر'
+    'shell': 'Magic Shells'
   }
   if (teks == 'quotes') tags = {
-    'quotes': 'قتباسات'
+    'quotes': 'Quotes'
   }
   if (teks == 'admin') tags = {
-    'admin': `انمي ${global.opts['restrict'] ? '' : '(Disabled)'}`
+    'admin': `Admin ${global.opts['restrict'] ? '' : '(Disabled)'}`
   }
   if (teks == 'grup') tags = {
-    'group': 'جروب'
+    'group': 'Grup'
   }
   if (teks == 'premium') tags = {
-    'premium': 'الترقية'
+    'premium': 'Premium'
   }
   if (teks == 'videomaker') tags = {
-    'videomaker': 'صانع الفيديو'
+    'videomaker': Video Maker'
   }
   if (teks == 'internet') tags = {
-    'internet': 'إنترنت'
+    'internet': 'Internet'
   }
   if (teks == anonymous') tags = {
-    'anonymous': 'دردشة مجهولة'
+    'anonymous': 'Anonymous Chat'
   }
   if (teks == 'nulis') tags = {
-    'nulis': 'سحر تصميم & شعار'
+    'nulis': 'MagerNulis & Logo'
   }
   if (teks == 'downloader') tags = {
-    'downloader': 'تنزيل'
+    'downloader': 'Downloader'
   }
   if (teks == 'tools') tags = {
-    'tools': 'أدوات'
+    'tools': 'tools'
   }
   if (teks == 'fun') tags = {
-    'fun': 'متعة'
+    'fun': 'fun'
   }
   if (teks == 'anime') tags = {
-    'anime': 'انمي'
+    'anime': 'anime'
   }
   if (teks == 'Database') tags = {
     'database': 'قاعدة البيانات'
   }
   if (teks == 'Voice') tags = {
-    'audio': 'مغير الصوت'
+    'audio': 'Voice'
   }
   if (teks == 'vote') tags = {
-    'vote': 'التصويت',
-    'absen': 'أبسن'
+    'vote': 'vote',
+    'absen': 'Absen'
   }
   if (teks == 'owner') tags = {
     'owner': 'المطور',
