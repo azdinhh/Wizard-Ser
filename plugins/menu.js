@@ -53,37 +53,37 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'info': 'Info',
     '': 'No Category',
   }
-  if (teks == 'game') tags = {
+  if (teks == 'الالعاب') tags = {
     'game': 'Game'
   }
-  if (teks == 'xp') tags = {
+  if (teks == 'النقاط') tags = {
     'xp': 'Exp & Limit'
   }
-  if (teks == 'stiker') tags = {
+  if (teks == 'ستكرز') tags = {
     'sticker': 'Stiker'
   }
-  if (teks == 'shell') tags = {
+  if (teks == 'سحر') tags = {
     'shell': 'Magic Shells'
   }
-  if (teks == 'quotes') tags = {
+  if (teks == 'قتباسات') tags = {
     'quotes': 'Quotes'
   }
-  if (teks == 'admin') tags = {
+  if (teks == 'ادمين') tags = {
     'admin': `Admin ${global.opts['restrict'] ? '' : '(Disabled)'}`
   }
-  if (teks == 'grup') tags = {
+  if (teks == 'كروب') tags = {
     'group': 'Grup'
   }
   if (teks == 'premium') tags = {
     'premium': 'Premium'
   }
-  if (teks == 'videomaker') tags = {
+  if (teks == 'صانع الفيديو') tags = {
     'videomaker': 'Video Maker'
   }
-  if (teks == 'internet') tags = {
+  if (teks == 'إنترنت') tags = {
     'internet': 'Internet'
   }
-  if (teks == 'anonymous') tags = {
+  if (teks == 'دردشة مجهولة') tags = {
     'anonymous': 'Anonymous Chat'
   }
   if (teks == 'nulis') tags = {
