@@ -2,14 +2,14 @@ let handler = async (m, { conn, text }) => {
     let name = m.fromMe ? conn.user : conn.contacts[m.sender]
 
   conn.reply(m.chat, `
-*「 ANTI TOXIC 」*
-Sender : ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}
-Message : ${m.text}
-Get used to it, don't be toxic! :)
+*「 مضاد سب 」*
+مرسل : ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}
+رسالة : ${m.text}
+اعتد عليه ، لا تسب احد سيتم اطرك! :)
 `.trim(), m)
     let mentionedJid = [m.sender]
 }
-handler.customPrefix = /bitch|fuck|nude|fucker|myre|kunna|andi|poori|poor/i
+handler.customPrefix = /زبي|قود|قحبة|ولد القحبة|متقوبة|نحويك|نيكك|سكس|poor/i
 handler.command = new RegExp
 
 module.exports = handler
