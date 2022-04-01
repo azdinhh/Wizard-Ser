@@ -2,12 +2,12 @@ let handler = async (m, { conn, text }) => {
   let chats = conn.chats.all().filter(v => v.jid.endsWith('.net')).map(v => v.jid)
   let cc = conn.serializeM(text ? m : m.quoted ? await m.getQuotedObj() : false || m)
   let teks = text ? text : cc.text
-  conn.reply(m.chat, `_Send a broadcast message to ${chats.length} chat_\nEstimation complete ${chats.length * 1.5} second`, m)
+  conn.reply(m.chat, `_إرسال رسالة البث إلى ${chats.length} chat_\nاكتمل التقدير ${chats.length * 1.5} ثانيا`, m)
   for (let id of chats) {
     await delay(1500)
-    await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : ' *〔 Wizard-Ser Broadcast 〕*\n\n' + teks + '\n\n' + watermark), true).catch(_ => _)
+    await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : ' *〔 الــغـــࢪبــي إذاعة 〕*\n\n' + teks + '\n\n' + watermark), true).catch(_ => _)
   }
-  m.reply('_*Broadcast Complete*_')
+  m.reply('_*اكتمل البث*_')
 }
 handler.help = ['broadcast', 'bc'].map(v => v + ' <text>')
 handler.tags = ['owner']
