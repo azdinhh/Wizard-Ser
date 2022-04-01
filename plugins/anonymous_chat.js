@@ -5,14 +5,14 @@ async function handler(m, { command, usedPrefix }) {
     command = command.toLowerCase()
     this.anonymous = this.anonymous ? this.anonymous : {}
     switch (command) {
-        case 'التالي':
-        case 'غادر': {
+        case 'next':
+        case 'leave': {
             let room = Object.values(this.anonymous).find(room => room.check(m.sender))
             if (!room) {
                 await this.sendButton(m.chat, '_أنت لست في محادثة مجهولة_', watermark, 'ابحث عن شريك', `${usedPrefix}start`)
                 throw false
             }
-            m.reply('_نعم_')
+            m.reply('_Ok_')
             let other = room.other(m.sender)
             if (other) await this.sendButton(other, '_غادر الشريك الدردشة_', watermark, 'ابحث عن شريك', `${usedPrefix}start`)
             delete this.anonymous[room.id]
@@ -20,12 +20,12 @@ async function handler(m, { command, usedPrefix }) {
         }
         case 'start': {
             if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
-                await this.sendButton(m.chat, '_أنت لا تزال في محادثة مجهولة ، تنتظر شريكًا', watermark, 'الخروج', `${usedPrefix}leave`)
+                await this.sendButton(m.chat, '_أنت لا تزال في محادثة مجهولة ، تنتظر شريكًا', watermark, 'Go out', `${usedPrefix}leave`)
                 throw false
             }
-            let room = Object.values(this.anonymous).find(room => room.state === 'انتظار' && !room.check(m.sender))
+            let room = Object.values(this.anonymous).find(room => room.state === 'Next' && !room.check(m.sender))
             if (room) {
-                await this.sendButton(room.a, '_تم العثور على الشريك!_', watermark, 'التالي', `${usedPrefix}next`)
+                await this.sendButton(room.a, '_تم العثور على الشريك!_', watermark, 'Next', `${usedPrefix}next`)
                 room.b = m.sender
                 room.state = 'CHATTING'
                 await this.sendButton(room.b, '_تم العثور على الشريك_', watermark, 'التالي', `${usedPrefix}next`)
@@ -35,7 +35,7 @@ async function handler(m, { command, usedPrefix }) {
                     id,
                     a: m.sender,
                     b: '',
-                    state: 'انتظار',
+                    state: 'WAITING',
                     check: function (who = '') {
                         return [this.a, this.b].includes(who)
                     },
