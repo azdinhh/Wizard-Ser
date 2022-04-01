@@ -6,11 +6,11 @@ let handler = async (m, { conn }) => {
     let uptime = clockString(_uptime)
 
     m.reply(`
-┌─〔 Status 〕
-├ *${groups.length}* Group
+┌─〔 حالة 〕
+├ *${groups.length}* مجموعة
 ├ *${chats.length - groups.length}* دردشة خاصة
 ├ *${Object.keys(global.db.data.users).length}* المستخدمون
-├ *${conn.blocklist.length}* Blocked
+├ *${conn.blocklist.length}* ممنوع
 ├ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* الدردشة المحظورة
 ├ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* مستخدم محظور
 └────
