@@ -3,7 +3,7 @@ let handler = async (m, { conn, text }) => {
   if (m.chat in conn.hartatahta) throw 'شخص ما لا يزال يصنع\nإرسال رسالة نصية إلى حارتا تحتا\nفي هذه الدردشة ... انتظر حتى تنتهي'
   if (!text) throw `أوم ... أين النص?`
   else conn.hartatahta[m.chat] = true
-  m.reply('_Creating..._\n*الرجاء الانتظار حوالي 1 دقيقة*')
+  m.reply('خلق..._\n*الرجاء الانتظار حوالي 1 دقيقة*')
   try {
     let img = await ht(text)
     conn.sendFile(m.chat, img, 'Harta Tahta.png', '*© الــغـــࢪبــي*\nمع ❤️', m)
