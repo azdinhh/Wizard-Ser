@@ -11,7 +11,7 @@ const defaultMenu = {
      ✪〔 %me 〕✪
 🔸Hai, %name!
 
-🔸 Github: [ RELEASING SOON ]
+🔸 انستغرام: [ https://instagram.com/azdi_n_1?=nametag ]
 
 
      〘 *بوت الغربي* 〙
@@ -125,7 +125,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = registered ? global.db.data.users[m.sender].name : conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
-    let locale = 'en'
+    let locale = 'ar'
     // d.getTimeZoneOffset()
     // Offset -420 is 18.00
     // Offset    0 is  0.00
