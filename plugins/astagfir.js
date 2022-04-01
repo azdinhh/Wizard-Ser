@@ -5,7 +5,7 @@ let handler = async (m) => {
     let waktu = user.lastIstigfar + 180000
     if (new Date - user.lastIstigfar < 180000) throw `يمكنك استخدام هذا الأمر مرة أخرى بعد ${msToTime(waktu - new Date())}`
     user.warning -= 1
-    m.reply(`Warning: ${user.warning} / 5`)
+    m.reply(`تحذير: ${user.warning} / 5`)
     user.lastIstigfar = new Date * 1
 }
 handler.command = /^(astagh?fir(ullah)?|sorry)$/i
