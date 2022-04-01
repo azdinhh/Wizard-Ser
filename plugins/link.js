@@ -6,7 +6,7 @@ let handler = async (m, { conn, args }) => {
   if (!groupMetadata) throw 'groupMetadata is undefined'
   if (!'participants' in groupMetadata) throw 'لم يتم تعريف المشاركين'
   let me = groupMetadata.participants.find(user => user.jid === conn.user.jid)
-  if (!me) throw 'Im not in that group :/'
+  if (!me) throw 'أنا لست في تلك المجموعة :/'
   if (me.isAdmin !== true) throw 'أنا لست مشرفًا '
   m.reply('https://chat.whatsapp.com/' + await conn.groupInviteCode(group))
 }
