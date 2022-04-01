@@ -53,68 +53,68 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'info': 'Info',
     '': 'No Category',
   }
-  if (teks == 'الالعاب') tags = {
-    'game': 'Game'
+  if (teks == 'game') tags = {
+    'game': 'الالعاب'
   }
-  if (teks == 'النقاط') tags = {
-    'xp': 'Exp & Limit'
+  if (teks == 'xp') tags = {
+    'xp': 'إكسب & حد'
   }
-  if (teks == 'ستكرز') tags = {
-    'sticker': 'Stiker'
+  if (teks == 'stiker') tags = {
+    'sticker': 'ستكرز'
   }
-  if (teks == 'سحر') tags = {
-    'shell': 'Magic Shells'
+  if (teks == 'shell') tags = {
+    'shell': 'قذائف السحر'
   }
-  if (teks == 'قتباسات') tags = {
-    'quotes': 'Quotes'
+  if (teks == 'quotes') tags = {
+    'quotes': 'قتباسات'
   }
-  if (teks == 'ادمين') tags = {
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Disabled)'}`
+  if (teks == 'admin') tags = {
+    'admin': `انمي ${global.opts['restrict'] ? '' : '(Disabled)'}`
   }
-  if (teks == 'كروب') tags = {
-    'group': 'Grup'
+  if (teks == 'grup') tags = {
+    'group': 'جروب'
   }
-  if (teks == 'الممتازة') tags = {
-    'premium': 'Premium'
+  if (teks == 'premium') tags = {
+    'premium': 'الترقية'
   }
-  if (teks == 'صانع الفيديو') tags = {
-    'videomaker': 'Video Maker'
+  if (teks == 'videomaker') tags = {
+    'videomaker': 'صانع الفيديو'
   }
-  if (teks == 'إنترنت') tags = {
-    'internet': 'Internet'
+  if (teks == 'internet') tags = {
+    'internet': 'إنترنت'
   }
-  if (teks == 'دردشة مجهولة') tags = {
-    'anonymous': 'Anonymous Chat'
+  if (teks == anonymous') tags = {
+    'anonymous': 'دردشة مجهولة'
   }
-  if (teks == 'نوليس') tags = {
-    'nulis': 'MagerNulis & Logo'
+  if (teks == 'nulis') tags = {
+    'nulis': 'سحر تصميم & شعار'
   }
-  if (teks == 'تنزيل') tags = {
-    'downloader': 'Downloader'
+  if (teks == 'downloader') tags = {
+    'downloader': 'تنزيل'
   }
-  if (teks == 'أدوات') tags = {
-    'tools': 'Tools'
+  if (teks == 'tools') tags = {
+    'tools': 'أدوات'
   }
   if (teks == 'fun') tags = {
-    'fun': 'Fun'
+    'fun': 'متعة'
   }
-  if (teks == 'انمي') tags = {
-    'anime': 'Anime'
+  if (teks == 'anime') tags = {
+    'anime': 'انمي'
   }
-  if (teks == 'قاعدة البيانات') tags = {
-    'database': 'Database'
+  if (teks == 'Database') tags = {
+    'database': 'قاعدة البيانات'
   }
-  if (teks == 'اوديو') tags = {
-    'audio': 'Voice Changer'
+  if (teks == 'Voice') tags = {
+    'audio': 'مغير الصوت'
   }
-  if (teks == 'تصويت') tags = {
-    'vote': 'Voting',
-    'absen': 'Absen'
+  if (teks == 'vote') tags = {
+    'vote': 'التصويت',
+    'absen': 'أبسن'
   }
   if (teks == 'owner') tags = {
-    'owner': 'Owner',
-    'host': 'Host',
-    'advanced': 'Advanced'
+    'owner': 'المطور',
+    'host': 'مضيف',
+    'advanced': 'متقدم'
   }
 
 
@@ -168,7 +168,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `**مرحبا انا Kaneki من تطوير الــغـــࢪبــي*
+          "title": `*مرحبا انا Kaneki من تطوير الــغـــࢪبــي*
 
 *انستغرام الــغـــࢪبــي*
 *https://instagram.com/azdi_n_1?=nametag*
