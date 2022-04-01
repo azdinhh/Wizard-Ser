@@ -1,7 +1,7 @@
 let { GroupSettingChange } = require('@adiwajshing/baileys')
 let handler = m => m
 
-let badwordRegex = /زامل(k|g)|زبي?(g|k)|a?njin(g|k)|نحويك|b(a?n)?gsa?t|ko?nto?l|me?me?(k|q)|pe?pe?(k|q)|قود|زامل(t|d)|pe?ler|xnxx|pron huh|سكس|go?blo?k|to?lo?l|نيكك|(k|ng)e?nto?(t|d)|موك قحبة|اكبر قودا|dajj?al|هبط تقود(u|o)k|pantek|puki ?(mak)?|kimak|kampang|lonte|col(i|mek?)|pelacur|henceu?t|nigga|fuck|dick|bitch|tits|bastard|asshole/i // tambahin sendiri
+let badwordRegex = /زامل|زبي|سكت اولد القحبة|نحويك|b(a?n)?gsa?t|ko?nto?l|me?me?(k|q)|pe?pe?(k|q)|قود|زامل|pe?ler|xnxx|pron huh|سكس|go?blo?k|to?lo?l|نيكك|ng)e?nto?(t|d)|موك قحبة|اكبر قودا|dajj?al|هبط تقود(u|o)k|pantek|puki ?(mak)?|kimak|kampang|lonte|col(i|mek?)|pelacur|henceu?t|nigga|fuck|dick|bitch|tits|bastard|asshole/i // tambahin sendiri
 
 handler.before = function (m, { isOwner, isBotAdmin }) {
     if (m.isBaileys && m.fromMe) return !0
