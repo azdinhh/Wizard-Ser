@@ -3,14 +3,14 @@ let handler = async (m, { conn, usedPrefix, text }) => {
   let users = [...new Set([...global.conns.filter(conn => conn.user && conn.state !== 'close').map(conn => conn.user.jid)])]
   let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
   let teks = text ? text : cc.text
-  let content = conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '*〔 Ammu Broadcast 〕*\n\n' + teks)
+  let content = conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '*〔 Ammu إذاعة 〕*\n\n' + teks)
   for (let id of users) {
     await delay(1500)
     await conn.copyNForward(id, content, true)
   }
-  conn.reply(m.chat, `_Successfully sent broadcast to ${users.length} number to be bot_
+  conn.reply(m.chat, `_تم إرسال البث بنجاح إلى ${users.length} الرقم المراد بوت_
 ${users.map(v => 'wa.me/' + v.replace(/[^0-9]/g, '') + `?text=${encodeURIComponent(usedPrefix)}menu`).join('\n')}
-\nestimation complete ${users.length * 1.5} second`.trim(), m)
+\nالتقدير الكامل ${users.length * 1.5} ثانيا`.trim(), m)
 }
 handler.help = ['broadcastjadibot', 'bcbot'].map(v => v + ' <teks>')
 handler.tags = ['host']
