@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { text, usedPrefix, command }) => {
-  if (!text) throw `uhm.. the country?\n\nexample:\n${usedPrefix + command} morocco`
+  if (!text) throw `اه .. البلد?\n\nمثال:\n${usedPrefix + command} morocco`
   let res = await fetch(global.API('https://covid19.mathdro.id', '/api/countries/' + (text)))
   if (!res.ok) throw await `${res.status} ${res.statusText}`
   let json = await res.json()
