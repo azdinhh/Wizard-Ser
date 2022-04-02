@@ -7,7 +7,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let mime = (q.msg || q).mimetype || ''
     if (/image/.test(mime)) {
       let img = await q.download()
-      if (!img) throw `reply to image with caption *${usedPrefix + command}*`
+      if (!img) throw `الرد على الصورة مع التسمية التوضيحية *${usedPrefix + command}*`
       stiker = await sticker(img, false, global.packname, global.author)
     } else if (/video/.test(mime)) {
       if ((q.msg || q).seconds > 11) return m.reply('10 ثوان كحد أقصى!')
@@ -26,7 +26,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (stiker) conn.sendMessage(m.chat, stiker, MessageType.sticker, {
       quoted: m
     })
-    else throw 'Error, try to reply to the photo/make sure the mime is correct'
+    else throw 'خطأ, حاول الرد على الصورة / تأكد من صحة التمثيل الصامت'
   }
 }
 handler.help = ['stiker (أو ضعها كعنوان|منشن صورة)', 'stiker <url>', 'stikergif (ضعها كعنوان|منشن صورة)', 'stikergif <url>']
