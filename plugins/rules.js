@@ -15,7 +15,7 @@ let handler = async (m, { conn }) => {
 2. If you violate the rules number 1, 2, 3 then you can get banned from bots
 4. If you violate rule number 3 (insulting) then you will be picked up at your respective homes
 `.trim()
-    conn.fakeReply(m.chat, '*「 ⚠️ 」Loading...*', '0@s.whatsapp.net', '*RULES*')
+    conn.fakeReply(m.chat, '*「 ⚠️ 」جار التحميل...*', '0@s.whatsapp.net', '*RULES*')
     await conn.send2ButtonLoc(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160276111-32392546-2963-4d06-8721-462681d0bbbf.jpg")).buffer(), haruno, '© GHRBYB', 'ᴍᴇɴᴜ', '.menu', 'ᴏᴡɴᴇʀ', '.owner', m)
 }
 handler.tags = ['main']
