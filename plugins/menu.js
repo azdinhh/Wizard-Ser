@@ -192,7 +192,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
             {
               "rows": [
                 {
-                  "title": `ᎷᏫᎡᏫᏨᏨᏫ Ᏸ ᏫᎿ `,
+                  "title": `support bot `,
                   "description": "مجموعة دعم",
                   "rowId": ".git"
                 }, {
