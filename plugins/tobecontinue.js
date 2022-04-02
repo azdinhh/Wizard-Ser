@@ -13,11 +13,11 @@ let handler = async (m, { conn }) => {
   drawImageWithTint(ctx, data, '#704214', 0, 0, data.width, data.height);
   const ratio = base.width / base.height;
   const width = canvas.width / 2;
-  console.log("Make Code");
+  console.log("اصنع كود");
   const height = Math.round(width / ratio);
   ctx.drawImage(base, 0, canvas.height - height, width, height);
   const attachment = canvas.toBuffer();
-  conn.sendFile(m.chat, attachment, 'to-be-continue.png', '© Eva', m, 0, { thumbnail: attachment })
+  conn.sendFile(m.chat, attachment, 'أن-تكون-استمر.png', '© الــغـــࢪبــي', m, 0, { thumbnail: attachment })
 }
 
 handler.help = ['tbc @<user>']
