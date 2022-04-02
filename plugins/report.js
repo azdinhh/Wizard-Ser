@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
             mentionedJid: [m.sender]
         }
     })
-    m.reply(`_Message sent to bot owner, if ${command.toLowerCase()} just playing games will not be responded._`)
+    m.reply(`تم إرسال الرسالة إلى مطور البوت, if ${command.toLowerCase()} just playing games will not be responded._`)
 }
 handler.help = ['report', 'request'].map(v => v + ' <teks>')
 handler.tags = ['info']
