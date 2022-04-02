@@ -9,7 +9,7 @@ let handler = async (m, { conn, text }) => {
 `.trim(), m)
     let mentionedJid = [m.sender]
 }
-handler.customPrefix = /زبي|قود|قحبة|ولد القحبة|متقوبة|نحويك|نيكك|سكس|poor/i
+handler.customPrefix = /يابن المتناكه|كس امك|كسختك|كسمك|يكسمك|ابن الشرموطة|نيكك|سكس|طبون|متقوبة|نحويك|نيكك|متقوبة|نحويك|نيكك/i
 handler.command = new RegExp
 
 module.exports = handler
