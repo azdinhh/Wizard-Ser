@@ -22,14 +22,14 @@ module.exports = {
                 content: m.msg,
                 sender: m.sender
               }
-              this.sendMessage(m.chat, ('*GROUP BUG DETECTED, DONT SCROLL UP! DELETE THE GROUP CHATS SO NO ERROR!!!*\n\n' + require('util').format(log)).padEnd(65536, '\n'), 'extendedTextMessage')
+              this.sendMessage(m.chat, ('*تم اكتشاف خطأ جماعي, لا تتجول! احذف محادثات المجموعة حتى لا يكون هناك خطأ!!!*\n\n' + require('util').format(log)).padEnd(65536, '\n'), 'extendedTextMessage')
               // this.modifyChat(m.chat, 'clear', {
               //     includeStarred: false
               // }).catch(console.error)
               this.reply(global.owner[0] + '@s.whatsapp.net', `
-The perpetrator of the gc bug sender @${m.sender.split`@`[0]}
-ID: ${m.isGroup ? m.chat : m.sender}
-Name: ${m.isGroup ? this.getName(m.chat) : this.getName(m.sender)}
+مرتكب خطأ المرسل gc bug مرسل @${m.sender.split`@`[0]}
+هوية شخصية: ${m.isGroup ? m.chat : m.sender}
+اسم: ${m.isGroup ? this.getName(m.chat) : this.getName(m.sender)}
 `.trim(), null, { contextInfo: { mentionedJid: [m.sender] } })
             }
             break
