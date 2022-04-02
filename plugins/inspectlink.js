@@ -2,25 +2,25 @@ let linkRegex = /chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
 
 let handler = async (m, { conn, text }) => {
   let [, code] = text.match(linkRegex) || []
-  if (!code) throw 'Link invalid'
+  if (!code) throw 'الارتباط غير صالح'
   let res = await conn.query({
-    json: ["query", "invite", code],
+    json: ["استفسار", "يدعو", code],
     expect200: true
   })
   if (!res) throw res
   let caption = `
--- [Group Link Inspector] --
+-- [مفتش ارتباط المجموعة] --
 ${res.id}
-*Title:* ${res.subject}
-*Made by @${res.id.split('-')[0]} on *${formatDate(res.creation * 1000)}*${res.subjectOwner ? `
-*Title changed* by @${res.subjectOwner.split`@`[0]} on *${formatDate(res.subjectTime * 1000)}*`: ''}${res.descOwner ? `
+*لقب:* ${res.subject}
+*مصنوع بواسطة @${res.id.split('-')[0]} on *${formatDate(res.creation * 1000)}*${res.subjectOwner ? `
+*تم تغيير العنوان* بواسطة @${res.subjectOwner.split`@`[0]} on *${formatDate(res.subjectTime * 1000)}*`: ''}${res.descOwner ? `
 *Description modified* by@${res.descOwner.split`@`[0]} on *${formatDate(res.descTime * 1000)}*` : ''}
-*Number of Members:* ${res.size}
-*Members who are known to join*: ${res.participants ? '\n' + res.participants.map((user, i) => ++i + '. @' + user.id.split`@`[0]).join('\n').trim() : 'There is not any'}
-${res.desc ? `*description:*
-${res.desc}` : '*No Description*'}
+*عدد من أعضاء:* ${res.size}
+*الأعضاء المعروفين بالانضمامn*: ${res.participants ? '\n' + res.participants.map((user, i) => ++i + '. @' + user.id.split`@`[0]).join('\n').trim() : 'There is not any'}
+${res.desc ? `*وصف:*
+${res.desc}` : '*بدون وصف*'}
 
-*JSON Version*
+*إصدار جسون*
 \`\`\`${JSON.stringify(res, null, 1)}\`\`\`
 `.trim()
   let pp = await conn.getProfilePicture(res.id).catch(console.error)
