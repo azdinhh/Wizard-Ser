@@ -50,67 +50,67 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     '': 'No Category',
   }
   if (teks == 'game') tags = {
-    'game': 'Game'
+    'game': 'الالعاب'
   }
   if (teks == 'xp') tags = {
-    'xp': 'Exp & Limit'
+    'xp': 'النقاط & الحد'
   }
   if (teks == 'stiker') tags = {
-    'sticker': 'Stiker'
+    'sticker': 'ستكرز'
   }
   if (teks == 'shell') tags = {
-    'shell': 'Magic Shells'
+    'shell': 'قذائف السحر'
   }
   if (teks == 'quotes') tags = {
-    'quotes': 'Quotes'
+    'quotes': 'قتباسات'
   }
   if (teks == 'admin') tags = {
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Disabled)'}`
+    'admin': `ادمين ${global.opts['بتقييد'] ? '' : '(عاجز)'}`
   }
   if (teks == 'grup') tags = {
-    'group': 'Grup'
+    'group': 'جروب'
   }
   if (teks == 'premium') tags = {
-    'premium': 'Premium'
+    'premium': 'الترقية'
   }
   if (teks == 'videomaker') tags = {
-    'videomaker': 'Video Maker'
+    'videomaker': 'صانع الفيديو'
   }
   if (teks == 'internet') tags = {
-    'internet': 'Internet'
+    'internet': 'إنترنت'
   }
   if (teks == 'anonymous') tags = {
-    'anonymous': 'Anonymous Chat'
+    'anonymous': 'دردشة مجهولة'
   }
   if (teks == 'nulis') tags = {
-    'nulis': 'MagerNulis & Logo'
+    'nulis': 'سحر تصميم & شعار'
   }
   if (teks == 'downloader') tags = {
-    'downloader': 'Downloader'
+    'downloader': 'تنزيل'
   }
   if (teks == 'tools') tags = {
-    'tools': 'Tools'
+    'tools': 'أدوات'
   }
   if (teks == 'fun') tags = {
-    'fun': 'Fun'
+    'fun': 'متعة'
   }
   if (teks == 'anime') tags = {
-    'anime': 'Anime'
+    'anime': 'انمي'
   }
   if (teks == 'database') tags = {
-    'database': 'Database'
+    'database': 'قاعدة البيانات'
   }
   if (teks == 'audio') tags = {
-    'audio': 'Voice Changer'
+    'audio': 'مغير الصوت'
   }
   if (teks == 'vote') tags = {
-    'vote': 'Voting',
-    'absen': 'Absen'
+    'vote': 'التصويت',
+    'absen': 'أبسن'
   }
   if (teks == 'owner') tags = {
-    'owner': 'Owner',
-    'host': 'Host',
-    'advanced': 'Advanced'
+    'owner': 'المطور',
+    'host': 'مضيف',
+    'advanced': 'متقدم'
   }
 
 
@@ -360,7 +360,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/160297587-cf1d132c-a045-470f-b805-f8100c3316a9.jpg")).buffer(), text.trim(), '© الغربي ', '.Owner', 'الكل', '.menu', m)
+    await conn.send2ButtonImg(m.chat, await (await fetch("https://user-images.githubusercontent.com/102433984/161386496-6d40b2ca-d5e9-4dc8-ae32-bddefd8287c0.jpg")).buffer(), text.trim(), '© الغربي ', '.Owner', 'الكل', '.menu', m)
   } catch (e) {
     conn.reply(m.chat, 'اسف, حاول مجددا', m)
     throw e
