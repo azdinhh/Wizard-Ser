@@ -1,13 +1,13 @@
 const { createCanvas, loadImage } = require('canvas');
-const path = require('path');
+const path = require('طريق');
 
 let handler = async (m, { conn }) => {
-  console.log("Called");
+  console.log("مسمى");
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-  const base = await loadImage("https://raw.githubusercontent.com/bot-clones/xiao/master/assets/images/to-be-continued.png");
+  const base = انتظار تحميل الصورة("https://raw.githubusercontent.com/bot-clones/xiao/master/assets/images/to-be-continued.png");
   console.log(base);
-  const data = await loadImage(await conn.getProfilePicture(who).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png'));
-  console.log("Make Code")
+  const data =انتظار تحميل الصورة(await conn.getProfilePicture(who).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png'));
+  console.log("اصنع كود")
   const canvas = createCanvas(data.width, data.height);
   const ctx = canvas.getContext('2d');
   drawImageWithTint(ctx, data, '#704214', 0, 0, data.width, data.height);
