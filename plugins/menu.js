@@ -65,7 +65,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'quotes': 'قتباسات'
   }
   if (teks == 'admin') tags = {
-    'admin': `ادمين ${global.opts['بتقييد'] ? '' : '(عاجز)'}`
+    'admin': `ادمين ${global.opts['بتقييد'] ? '' : '(ميزات بوت برو)'}`
   }
   if (teks == 'grup') tags = {
     'group': 'جروب'
