@@ -20,7 +20,7 @@ let handler = async (m, { conn, isOwner, text, isAdmin }) => {
     else global.db.data.users[who].banned = true
     m.reply(`${conn.user.name} غير نشط في الدردشة ${conn.getName(who) == undefined ? 'this' : conn.getName(who)}.`)
   } catch (e) {
-    throw `number does not exist in the database!`
+    throw `الرقم غير موجود في قاعدة البيانات!`
   }
 }
 handler.help = ['ban']
