@@ -5,7 +5,7 @@ let handler = async (m, { conn, text }) => {
   conn.reply(m.chat, `_إرسال رسالة البث إلى${groups.length} مجموعة_\اكتمل التقدير ${groups.length * 1.5} ثانيا`, m)
   for (let id of groups) {
     await delay(1500)
-    await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '*〔 الــغـــࢪبــي إذاعة 〕*\n\n' + teks + '\n\n' + watermark), true).catch(_ => _)
+    await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '*〔   إذاعة الــغـــࢪبــي  〕*\n\n' + teks + '\n\n' + watermark), true).catch(_ => _)
   }
   m.reply('_*اكتمل البث*_')
 }
