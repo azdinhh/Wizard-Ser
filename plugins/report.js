@@ -1,8 +1,8 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `if you find an error message, report it using this command\n\nexample:\n${usedPrefix + command} Good afternoon owner, I found an error like the following <copy/tag the error message>`
-    if (text.length < 10) throw `The report is too short, at least 10 characters!`
-    if (text.length > 1000) throw `Report is too long, maximum 1000 characters!`
-    let teks = `*${command.toUpperCase()}!*\n\nFrom : *@${m.sender.split`@`[0]}*\n\nMessage : ${text}\n`
+    if (!text) throw `إذا وجدت رسالة خطأ, أبلغ عن ذلك باستخدام هذا الأمر\n\nمثال:\n${usedPrefix + command} كيف حالك مطور, لقد وجدت خطأ مثل التالي <copy/ضع علامة على رسالة الخطأ>`
+    if (text.length < 10) throw `التقرير قصير جدًا ، ويتألف من 10 أحرف على الأقل!`
+    if (text.length > 1000) throw `التقرير طويل جدًا ، بحد أقصى 1000 حرف!`
+    let teks = `*${command.toUpperCase()}!*\n\nمن : *@${m.sender.split`@`[0]}*\n\nرسالة : ${text}\n`
     conn.reply(global.owner[0] + '@s.whatsapp.net', m.quoted ? teks + m.quoted.text : teks, null, {
         contextInfo: {
             mentionedJid: [m.sender]
