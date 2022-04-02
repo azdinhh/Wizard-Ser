@@ -9,7 +9,7 @@ let handler = async (m, { command, usedPrefix, text }) => {
     msgs[text] = M.fromObject(await m.getQuotedObj()).toJSON()
     m.reply(`تمت إضافة الرسالة بنجاح في قائمة الرسائل كـ '${text}'
     
-Access with ${usedPrefix}get${which} ${text}`)
+الوصول مع ${usedPrefix}احصل على${which} ${text}`)
 }
 handler.help = ['vn', 'msg', 'video', 'audio', 'img', 'sticker', 'gif'].map(v => 'add' + v + ' <teks>')
 handler.tags = ['database']
