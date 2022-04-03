@@ -11,7 +11,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
         else global.db.data.chats[res.gid].expired = now + jumlahHari
     })
     conn.sendButton(res.gid, `
-*${conn.user.name}* هو روبوت واتس اب مطور مين الــغـــࢪبــي, *${conn.user.name}* بدعوة من @${m.sender.split`@`[0]}
+*${conn.user.name}*هاي انا نيزوكو انا بوت اقوم بعدت ميزات, *${conn.user.name}* بدعوة من @${m.sender.split`@`[0]}
     
 اكتب *${usedPrefix}menu* لرؤية قائمة الأوامر`.trim(), watermark, 'Menu', `${usedPrefix}?`, 0, { contextInfo: { mentionedJid: [m.sender] } })
 }
