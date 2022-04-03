@@ -22,7 +22,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
             ممنوع: false,
             لفل: 0,
             الاتصال: 0,
-            الدور: 'Warrior V',
+            الدور: 'المحارب  5',
             لفل تلقائي: false,
             حاسوب: 0,
         }
@@ -32,14 +32,14 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         conn.reply(m.chat, fail, m, { contextInfo: { mentionedJid: ['212641427490@s.whatsapp.net'] } })
         throw false
     }
-    if (isNaN(txt)) throw 'only numbers'
+    if (isNaN(txt)) throw 'أرقام فقط'
     let poin = parseInt(txt)
     let limit = poin
     let pjk = Math.ceil(poin * pajak)
     limit += pjk
-    if (limit < 1) throw 'Minimum 1'
+    if (limit < 1) throw 'الحد الأدنى 1'
     let users = global.db.data.users
-    if (limit > users[m.sender].limit) throw 'The limit is not enough to transfer, there is a tax too'
+    if (limit > users[m.sender].limit) throw 'الحد لا يكفي للنقل, هناك ضريبة أيضا'
     users[m.sender].limit -= limit
     users[who].limit += poin
 
