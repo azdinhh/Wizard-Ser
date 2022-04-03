@@ -14,9 +14,9 @@ ${usedPrefix + command} 100
     let users = global.db.data.users[m.sender]
     let time = users.lastslot + 10000
     if (new Date - users.lastslot < 10000) throw `أنتظر لأجل ${msToTime(time - new Date())}`
-    if (taruhan < 1) throw 'Minimum 1 XP!'
+    if (taruhan < 1) throw '1 XP كحد أدنى!'
     if (users.exp < taruhan) {
-        throw `Your XP is not enough!`
+        throw `XP الخاص بك لا يكفي!`
     }
 
     let emojis = ["🏆️", "🥇", "💵"];
@@ -77,5 +77,5 @@ function msToTime(duration) {
     minutes = (minutes < 10) ? "0" + minutes : minutes
     seconds = (seconds < 10) ? "0" + seconds : seconds
 
-    return minutes + " minute " + seconds + " seconds"
+    return minutes + " الدقائق " + seconds + " ثواني"
 }
