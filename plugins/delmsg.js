@@ -1,6 +1,6 @@
 let handler = async (m, { command, usedPrefix, text }) => {
     let which = command.replace(/del/i, '')
-    if (!text) throw `use *${usedPrefix}list${which}* لرؤية القائمة`
+    if (!text) throw `استعمال *${usedPrefix}list${which}* لرؤية القائمة`
     let msgs = global.db.data.msgs
     if (!text in msgs) throw `'${text}' غير مسجل في قائمة الرسائل`
     delete msgs[text]
