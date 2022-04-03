@@ -24,7 +24,7 @@ let handler = async function (m, { text, usedPrefix, command }) {
 ├ SN: ${sn}
 └────
 
-save/star this message because SN (Serial Number) is used for re-registration
+حفظ / تمييز هذه الرسالة بنجمة لأن SN (الرقم التسلسلي) يُستخدم لإعادة التسجيل
 `.trim())
 }
 handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <name>.<age>')
