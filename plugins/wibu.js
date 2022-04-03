@@ -1,8 +1,8 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
    response = args.join(' ')
-  if (!args) throw 'Masukkan Parameter'
-  m.reply('Sedang Diproses...')
+  if (!args) throw 'مسكان معامل'
+  m.reply('سيدانج ديبروس...')
   let res = `https://api.xteam.xyz/asupan/wibu?apikey=MIMINETBOT`
   conn.sendFile(m.chat, res, 'wibu.mp4', `wangy wangy wangy`, m, false)
 }
