@@ -20,7 +20,7 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
       asDocument: chat.useDocument
     })
   } catch (e) {
-    return await conn.sendButton(m.chat, 'Server Error', '', 'Try Again', `${usedPrefix + command} ${args[0]}`)
+    return await conn.sendButton(m.chat, 'خطأ في الخادم', '', 'حاول مجددا', `${usedPrefix + command} ${args[0]}`)
   }
 }
 handler.help = ['mp4', 'v', ''].map(v => 'yt' + v + ` <url> [server: ${servers.join(', ')}]`)
