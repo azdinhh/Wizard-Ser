@@ -32,10 +32,10 @@ async function wikipedia(querry) {
   }
 }
 let handler = async (m, { conn, text }) => {
-  if (!text) throw `uhm.. what are you looking for?\n\nexample:\n.wiki nodejs`
+  if (!text) throw `اه .. ما الذي تبحث عنه?\n\nمثال:\n.wiki nodejs`
   wikipedia(`${text}`).then(res => {
     m.reply(res.result.isi)
-  }).catch(() => { m.reply('Not found') })
+  }).catch(() => { m.reply('لم يتم العثور على') })
 }
 handler.help = ['wikipedia <query>']
 handler.tags = ['internet']
