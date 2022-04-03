@@ -16,7 +16,7 @@ let handler = async function (m, { text, usedPrefix, command }) {
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
   m.reply(`
-  Register successful!
+  سجل بنجاح!
 
 ┌─〔 معلومات 〕
 ├ اسم: ${name}
