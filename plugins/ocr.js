@@ -5,7 +5,7 @@ const fetch = require('node-fetch')
 let handler = async (m, { usedPrefix, command }) => {
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
-    if (!mime) throw `this is the point for taking the text that is drawn, send / reply to the image with the command ${usedPrefix + command}`
+    if (!mime) throw `هذه هي النقطة لأخذ النص المرسوم ، وإرسال / الرد على الصورة بالأمر ${usedPrefix + command}`
     if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} not supported!`
     let img = await q.download()
     let url = await uploadImage(img)
