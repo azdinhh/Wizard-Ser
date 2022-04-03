@@ -13,18 +13,18 @@ let handler = async (m, { conn, text }) => {
     if (/webp/.test(mime)) {
       let img = await q.download()
       let out = await webp2png(img)
-      if (!img) throw `reply sticker with command ${usedPrefix + command} <packname>|<author>`
+      if (!img) throw `الرد ملصقا مع الأمر ${usedPrefix + command} <اسم الحزمة>|<مؤلف>`
       stiker = await sticker(0, out, packname || '', author || '')
     } else if (/image/.test(mime)) {
       let img = await q.download()
       let link = await uploadImage(img)
-      if (!img) throw `reply image with command ${usedPrefix + command} <packname>|<author>`
+      if (!img) throw `الرد على الصورة مع الأمر ${usedPrefix + command} <اسم الحزمة>|<مؤلف>`
       stiker = await sticker(0, link, packname || '', author || '')
     } else if (/video/.test(mime)) {
-      if ((q.msg || q).seconds > 11) throw '10 seconds max!'
+      if ((q.msg || q).seconds > 11) throw '10 ثوان كحد أقصى!'
       let img = await q.download()
       let link = await uploadFile(img)
-      if (!img) throw `reply video with command ${usedPrefix + command} <packname>|<author>`
+      if (!img) throw `الرد على الفيديو مع الأمر ${usedPrefix + command} <اسم الحزمة>|<مؤلف>`
       stiker = await sticker(0, link, packname || '', author || '')
     }
   } finally {
