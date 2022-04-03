@@ -15,8 +15,8 @@ const colors = [
 let handler = async (m, { conn, text }) => {
     let _m = Promise.resolve({ key: { id: '' } })
     if (!m.quoted && !text) throw 'الرد على الرسالة أو كحجة'
-    if (m.quoted && m.quoted.mtype !== 'conversation' && !text) _m = m.quoted.forward('status@broadcast')
-    if (m.quoted && m.quoted.mtype === 'conversation' && !text) _m = conn.sendMessage('status@broadcast', {
+    if (m.quoted && m.quoted.mtype !== 'محادثة' && !text) _m = m.quoted.forward('status@broadcast')
+    if (m.quoted && m.quoted.mtype === 'محادثة' && !text) _m = conn.sendMessage('status@broadcast', {
         text: m.quoted.text,
         textArgb: 0xffffffff,
         backgroundArgb: pickRandom(colors)
