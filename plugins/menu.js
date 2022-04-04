@@ -164,7 +164,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `* مرحبا بيكم في بوت نيزوكو من تطوير الغربي كيف يمكن اسعدك*,
+          "title": `مرحبا بيكم في بوت نيزوكو من تطوير الغربي كيف يمكن مسعدتك
 ┌─────❲ *نيزوكو* ❳
 ┊
 └─────────────────❋ཻུ۪۪⸙
