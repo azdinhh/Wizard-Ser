@@ -9,7 +9,7 @@ CFonts.say('Ammu', {
   font: 'block',
   align: 'center',
 })
-CFonts.say(`'${package.name}' By @${package.author.name || package.author}`, {
+CFonts.say(`'${package.name}' بواسطة @${package.author.name || package.author}`, {
   colors: ['#f2aa4c'],
   font: 'console',
   align: 'center',
@@ -47,7 +47,7 @@ function start(file) {
   })
   p.on('exit', code => {
     isRunning = false
-    console.error('Exited with code:', code)
+    console.error('خرج مع الكود:', code)
     if (code === 0) return
     fs.watchFile(args[0], () => {
       fs.unwatchFile(args[0])
