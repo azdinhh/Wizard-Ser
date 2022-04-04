@@ -11,8 +11,8 @@ CFonts.say('Ammu', {
 })
 CFonts.say(`'${package.name}' بواسطة @${package.author.name || package.author}`, {
   colors: ['#f2aa4c'],
-  font: 'console',
-  align: 'center',
+  font: 'وحدة التحكم',
+  align: 'المركز',
 })
 
 var isRunning = false
@@ -26,8 +26,8 @@ function start(file) {
   let args = [path.join(__dirname, file), ...process.argv.slice(2)]
   CFonts.say([process.argv[0], ...args].join(' '), {
     colors: ['#f2aa4c'],
-    font: 'console',
-    align: 'center',
+    font: 'وحدة التحكم',
+    align: 'المركز',
   })
   let p = spawn(process.argv[0], args, {
     stdio: ['inherit', 'inherit', 'inherit', 'ipc']
@@ -35,17 +35,17 @@ function start(file) {
   p.on('message', data => {
     console.log('[RECEIVED]', data)
     switch (data) {
-      case 'reset':
+      case 'إعادة تعيين':
         p.kill()
         isRunning = false
         start.apply(this, arguments)
         break
-      case 'uptime':
+      case 'مدة التشغيل':
         p.send(process.uptime())
         break
     }
   })
-  p.on('exit', code => {
+  p.on('خروج', code => {
     isRunning = false
     console.error('خرج مع الكود:', code)
     if (code === 0) return
