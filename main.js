@@ -93,9 +93,9 @@ if (opts['test']) {
       }
     })
   }
-  rl.on('line', line => conn.sendMessage('123@s.whatsapp.net', line.trim(), 'conversation'))
+  rl.on('خط', line => conn.sendMessage('123@s.whatsapp.net', line.trim(), 'محادثة'))
 } else {
-  rl.on('line', line => {
+  rl.on('خط', line => {
     process.send(line.trim())
   })
   conn.connect().then(async () => {
@@ -114,18 +114,18 @@ if (opts['test']) {
     global.timestamp.connect = new Date
   })
 }
-process.on('uncaughtException', console.error)
+process.on('استثناء', console.error)
 // let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
 
 let isInit = true
 global.reloadHandler = function () {
   let handler = require('./handler')
   if (!isInit) {
-    conn.off('chat-update', conn.handler)
-    conn.off('message-delete', conn.onDelete)
-    conn.off('group-participants-update', conn.onParticipantsUpdate)
-    conn.off('group-update', conn.onGroupUpdate)
-    conn.off('CB:action,,call', conn.onCall)
+    conn.off('تحديث الدردشة', conn.handler)
+    conn.off('حذف الرسائل', conn.onDelete)
+    conn.off('مجموعة المشاركين تحديثe', conn.onParticipantsUpdate)
+    conn.off('مجموعة التحديث', conn.onGroupUpdate)
+    conn.off('CB:عمل,,يتصل', conn.onCall)
   }
   conn.welcome = 'هاي, @user!\nمرحبا بك في المجموعة @subject\n\n@desc'
   conn.bye = '@user GoodBye'
@@ -146,7 +146,7 @@ global.reloadHandler = function () {
     conn.on('close', () => {
       setTimeout(async () => {
         try {
-          if (conn.state === 'close') {
+          if (conn.state === 'قريب') {
             if (fs.existsSync(authFile)) await conn.loadAuthInfo(authFile)
             await conn.connect()
             fs.writeFileSync(authFile, JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
