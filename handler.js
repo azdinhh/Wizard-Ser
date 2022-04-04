@@ -282,14 +282,14 @@ module.exports = {
 
           m.isCommand = true
           let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // Pendapatkan XP per Command
-          if (xp > 200) m.reply('Ngecit -_-') // Hehehe
+          if (xp > 200) m.reply('نجيسيت -_-') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-            this.reply(m.chat, `Your limit is up, please buy via *${usedPrefix}buy*`, m)
+            this.reply(m.chat, `تجاوز الحد الخاص بك, يرجى الشراء عبر *${usedPrefix}يشترى*`, m)
             continue // Limit habis
           }
           if (plugin.level > _user.level) {
-            this.reply(m.chat, `level required ${plugin.level} to use this command. Your level ${_user.level}`, m)
+            this.reply(m.chat, `المستوى المطلوب ${plugin.level} لاستخدام هذا الأمر. مستواك ${_user.level}`, m)
             continue // Jika levelnya belum tercapai
           }
           let extra = {
@@ -335,7 +335,7 @@ module.exports = {
                 console.error(e)
               }
             }
-            // if (m.limit) m.reply(+ m.limit + ' Limit terpakai') // Jadikan sebagai komentar jika kamu risih dengan pesan ini
+            // if (m.limit) m.reply(+ m.limit + ' حد تيرباكاي ') // Jadikan sebagai komentar jika kamu risih dengan pesan ini
           }
           break
         }
@@ -397,7 +397,7 @@ module.exports = {
               } catch (e) {
               } finally {
                 text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'welcome, @user!').replace('@subject', this.getName(jid)).replace('@desc', groupMetadata.desc) :
-                  (chat.sBye || this.bye || conn.bye || 'See you later, @user!')).replace(/@user/g, '@' + user.split`@`[0])
+                  (chat.sBye || this.bye || conn.bye || 'أراك لاحقا, @user!')).replace(/@user/g, '@' + user.split`@`[0])
                 let wel = `https://hardianto-chan.herokuapp.com/api/welcome4?profile=${pp}&name=${encodeURIComponent(this.getName(user))}`
                 let lea = `https://hardianto-chan.herokuapp.com/api/goodbye3?profile=${pp}&name=${encodeURIComponent(this.getName(user))}&bg=https://telegra.ph/file/c996b407dbb9af2308487.jpg&namegb=${encodeURIComponent(this.getName(jid))}&member=${encodeURIComponent(groupMetadata.participants.length)}`
                 this.sendFile(jid, action === 'add' ? wel : lea, 'pp.jpg', text, null, false, {
@@ -413,7 +413,7 @@ module.exports = {
       case 'promote':
         text = (chat.sPromote || this.spromote || conn.spromote || '@current user Admin')
       case 'demote':
-        if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@the current user is not an admin')
+        if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@المستخدم الحالي ليس مشرفًا')
         text = text.replace('@user', '@' + participants[0].split`@`[0])
         if (chat.detect) this.sendMessage(jid, text, MessageType.extendedText, {
           contextInfo: {
@@ -427,7 +427,7 @@ module.exports = {
     let chat = global.db.data.chats[m.key.remoteJid]
     if (chat.delete) return
     await this.sendButton(m.key.remoteJid, `
-    Detected @${m.participant.split`@`[0]} deleted message
+    مكتشف @${m.participant.split`@`[0]} رسالة محذوفة
 اكتب *.on delete* لإيقاف هذه الرسالة
 `.trim(), '', 'Turn off Antidelete', ',on delete', m.message, {
       contextInfo: {
