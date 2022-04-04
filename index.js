@@ -9,7 +9,7 @@ CFonts.say('Ammu', {
   font: 'block',
   align: 'center',
 })
-CFonts.say(`'${package.name}' By @${package.author.name || package.author}`, {
+CFonts.say(`'${package.name}' بواسطة @${package.author.name || package.author}`, {
   colors: ['#f2aa4c'],
   font: 'console',
   align: 'center',
