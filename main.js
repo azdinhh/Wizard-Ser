@@ -137,10 +137,10 @@ global.reloadHandler = function () {
   conn.onGroupUpdate = handler.GroupUpdate
   conn.onCall = handler.onCall
   conn.on('chat-update', conn.handler)
-  conn.on('message-delete', conn.onDelete)
-  conn.on('group-participants-update', conn.onParticipantsUpdate)
-  conn.on('group-update', conn.onGroupUpdate)
-  conn.on('CB:action,,call', conn.onCall)
+  conn.on('حذف الرسائل', conn.onDelete)
+  conn.on('مجموعة المشاركين تحديث', conn.onParticipantsUpdate)
+  conn.on('مجموعة التحديث', conn.onGroupUpdate)
+  conn.on('CB:عمل,,يتصل', conn.onCall)
   if (isInit) {
     conn.on('error', conn.logger.error)
     conn.on('close', () => {
@@ -163,7 +163,7 @@ global.reloadHandler = function () {
 }
 
 // Plugin Loader
-let pluginFolder = path.join(__dirname, 'plugins')
+let pluginFolder = path.join(__dirname, 'الإضافات')
 let pluginFilter = filename => /\.js$/.test(filename)
 global.plugins = {}
 for (let filename of fs.readdirSync(pluginFolder).filter(pluginFilter)) {
@@ -197,7 +197,7 @@ global.reload = (_event, filename) => {
   }
 }
 Object.freeze(global.reload)
-fs.watch(path.join(__dirname, 'plugins'), global.reload)
+fs.watch(path.join(__dirname, 'الإضافات'), global.reload)
 global.reloadHandler()
 
 
@@ -235,9 +235,9 @@ async function _quickTest() {
   require('./lib/sticker').support = s
   Object.freeze(global.support)
 
-  if (!s.ffmpeg) conn.logger.warn('Please install ffmpeg to send videos (pkg install ffmpeg)')
-  if (s.ffmpeg && !s.ffmpegWebp) conn.logger.warn('Stickers cant be animated without libwebp on ffmpeg (--enable-ibwebp while compiling ffmpeg)')
-  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('Stickers may not work without imagemagick if libwebp in ffmpeg is not installed (pkg install imagemagick)')
+  if (!s.ffmpeg) conn.logger.warn('الرجاء تثبيت ffmpeg لإرسال مقاطع الفيديو (تثبيت pkg ffmpeg)')
+  if (s.ffmpeg && !s.ffmpegWebp) conn.logger.warn('لا يمكن تحريك الملصقات بدون libwebp على ffmpeg (--enable-ibwebp أثناء تجميع ffmpeg)')
+  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('قد لا تعمل الملصقات بدون تخيل الصورة إذا لم يتم تثبيت libwebp في ffmpeg (تثبيت برنامج pkg)')
 }
 
 _quickTest()
