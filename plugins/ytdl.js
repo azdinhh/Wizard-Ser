@@ -12,10 +12,10 @@ let handler = async (m, { itsu, args, isPrems, isOwner, usedPrefix, text }) => {
   let isLimit = (isPrems || isOwner ? 99 : limit) * 998888 < filesize
 await itsu.relayWAMessage(itsu.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
-                        "title": `*Title*: ${title}`,
-                        "description": " \n_©الغربي ",
-                        "buttonText": `Quality`,
-                        "listType": "SINGLE_SELECT",
+                        "لقب": `*لقب*: ${title}`,
+                        "وصف": " \n_©الغربي ",
+                        "زر كتابة": `Quality`,
+                        "نوع القائمة": "SINGLE_SELECT",
                         "sections": [
                             { title: '『 Quality Video』',
                                 "rows": [
