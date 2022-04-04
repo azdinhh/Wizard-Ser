@@ -32,8 +32,8 @@ handler.all = async m => {
     let { res, filename, text, timeout } = confirmation[m.sender]
     if (/^y(es|a)?$/i.test(m.text)) {
         res.body.pipe(createWriteStream(filename))
-        res.body.once('end', () => {
-            m.reply('Done overwrite!')
+        res.body.once('نهاية', () => {
+            m.reply('تم الكتابة فوقها!')
             conn.sendFile(m.chat, filename, text, null, m).catch(console.error)
         })
         clearTimeout(timeout)
