@@ -7,7 +7,7 @@ let handler = async (m, { conn }) => {
     process.send('reset')
   } else throw '_Ammu..._'
 }
-handler.help = ['debounce' + (process.send ? '' : ' (Does not work)')]
+handler.help = ['debounce' + (process.send ? '' : ' (لا يعمل)')]
 handler.tags = ['host']
 handler.command = /^debounce$/i
 handler.owner = true
