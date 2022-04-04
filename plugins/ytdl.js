@@ -20,10 +20,10 @@ await itsu.relayWAMessage(itsu.prepareMessageFromContent(m.chat, {
                             { title: '『 جودة الفيديو』',
                                 "rows": [
                                     {
-                                        "title": `اوديو`, "description":  title,
+                                        "title": `اوديو`, "وصف":  title,
                                         "rowId": `${usedPrefix}dlmsc ${args[0]}`
                                     }, {
-                                       "لقب": `240p✅ , "description": title,
+                                       "لقب": `240p✅ , "وصف": title,
                                        "rowId": `${usedPrefix}dlvid ${args[0]} 240`
                                     }, {
                                        "لقب": `360p✅`,
@@ -43,7 +43,7 @@ await itsu.relayWAMessage(itsu.prepareMessageFromContent(m.chat, {
                                         "rowId": `${usedPrefix}dlvid ${args[0]} 1080`
                                     },{
 "لقب": `Menu`,
-"description": ``, 
+"وصف": ``, 
                                        "rowId": `${usedPrefix} menu`}
                                 ]
                             }
