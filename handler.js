@@ -428,7 +428,7 @@ module.exports = {
     if (chat.delete) return
     await this.sendButton(m.key.remoteJid, `
     Detected @${m.participant.split`@`[0]} deleted message
-type *.on delete* to turn off this message
+اكتب *.on delete* لإيقاف هذه الرسالة
 `.trim(), '', 'Turn off Antidelete', ',on delete', m.message, {
       contextInfo: {
         mentionedJid: [m.participant]
@@ -449,7 +449,7 @@ type *.on delete* to turn off this message
         break
     }
     user.call += 1
-    await this.reply(from, `If you call more than 2, you will be blocked.\n\n${user.call} / 2`, null)
+    await this.reply(from, `إذا اتصلت بأكثر من 2, سيتم حظرك.\n\n${user.call} / 2`, null)
     if (user.call == 5) {
       await this.blockUser(from, 'add')
       user.call = 0
@@ -461,7 +461,7 @@ type *.on delete* to turn off this message
     let caption = `
     @${descOwner.split`@`[0]} has changed the group description.
     ${desc}
-    type *.off desc* to turn off this message
+    اكتب *.off desc* لإيقاف هذه الرسالة
         `.trim()
     this.sendButton(jid, caption, '', 'Turn off Description', ',off desc', { contextInfo: { mentionedJid: this.parseMention(caption) } })
 
