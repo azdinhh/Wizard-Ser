@@ -1,4 +1,4 @@
-# بوت الغربي
+# 🌸Nezuko🌸
 
 <div align="center">
   <img border-radius: 15px src="https://user-images.githubusercontent.com/102433984/161561361-4f1e92af-d7bd-495f-828f-ca212d624f37.gif" width="200" height="200"/>
