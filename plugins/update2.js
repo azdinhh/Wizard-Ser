@@ -18,11 +18,11 @@ async function handler(m, { text }) {
             text,
             timeout: setTimeout(() => (m.reply('timed out'), delete confirmation[m.sender]), 60000)
         }
-        throw 'The file already exists, are you sure you want to overwrite? (Y/n) (60s Timeout)'
+        throw 'الملف موجود بالفعل ، هل تريد بالتأكيد الكتابة فوقه? (Y/n) (مهلة 60 ثانية)'
     }
     res.body.pipe(createWriteStream(filename))
-    res.body.once('end', () => {
-        m.reply('Successfully updated!')
+    res.body.once('نهاية', () => {
+        m.reply('تم التحديث بنجاح!')
         conn.sendFile(m.chat, filename, text, null, m).catch(console.error)
     })
 }
