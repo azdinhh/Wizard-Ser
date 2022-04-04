@@ -1,15 +1,15 @@
 let limit = 30
 const { servers, yta } = require('../lib/y2mate')
 let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) => {
-  if (!args || !args[0]) throw `Example:\n${usedPrefix + command} https://www.youtube.com/watch`
+  if (!args || !args[0]) throw `مثال:\n${usedPrefix + command} https://www.youtube.com/watch`
   let chat = global.db.data.chats[m.chat]
   let server = (args[1] || servers[0]).toLowerCase()
   let { dl_link, thumb, title, filesize, filesizeF } = await yta(args[0], servers.includes(server) ? server : servers[0])
   let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesize
-  m.reply(isLimit ? `File Size: ${filesizeF}\nFile size above ${limit} MB, download it yourself: ${dl_link}` : global.wait)
+  m.reply(isLimit ? `حجم الملفe: ${filesizeF}\nلا يمكن تنزيل اكثر من ${limit} MB, قم بتنزيله بنفسك: ${dl_link}` : global.wait)
   if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp3', `
-*Title:* ${title}
-*File Size:* ${filesizeF}
+*لقب:* ${title}
+*حجم الملف:* ${filesizeF}
 `.trim(), m, null, {
     asDocument: chat.useDocument, mimetype: 'audio/mp4'
   })
