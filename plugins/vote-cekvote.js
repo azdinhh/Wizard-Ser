@@ -9,13 +9,13 @@ let handler = async (m, { conn, usedPrefix }) => {
     let [reason, upvote, devote] = conn.vote[id]
     let mentionedJid = [...upvote, ...devote]
     let caption = `
-    〔 VOTE 〕
-*Reason:* ${reason}
-*UPVOTE*
-_Total: ${upvote.length}_
+    〔 تصويت 〕
+*سبب:* ${reason}
+*التصويت*
+_المجموع: ${upvote.length}_
 ${upvote.map(u => '@' + u.split('@')[0]).join('\n')}
-*DEVOTE*
-_Total: ${devote.length}_
+*ديفو*
+_المجموع: ${devote.length}_
 ${devote.map(u => '@' + u.split('@')[0]).join('\n')}
 _by Eva_
     `.trim()
