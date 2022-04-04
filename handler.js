@@ -411,7 +411,7 @@ module.exports = {
           }
           break
       case 'promote':
-        text = (chat.sPromote || this.spromote || conn.spromote || '@current user Admin')
+        text = (chat.sPromote || this.spromote || conn.spromote || '@المستخدم الحالي ادمين')
       case 'demote':
         if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@المستخدم الحالي ليس مشرفًا')
         text = text.replace('@user', '@' + participants[0].split`@`[0])
@@ -459,7 +459,7 @@ module.exports = {
     if (!db.data.chats[jid].descUpdate) return
     if (!desc) return
     let caption = `
-    @${descOwner.split`@`[0]} has changed the group description.
+    @${descOwner.split`@`[0]} قام بتغيير وصف المجموعة.
     ${desc}
     اكتب *.off desc* لإيقاف هذه الرسالة
         `.trim()
