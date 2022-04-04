@@ -11,7 +11,7 @@ handler.all = async function (m) {
     if (m.sender in this.spam) {
         this.spam[m.sender].count++
         if (m.messageTimestamp.toNumber() - this.spam[m.sender].lastspam > 8) {
-            if (this.spam[m.sender].count > 10) {
+            if (this.spam[m.sender].count > 8) {
                 db.data.users[m.sender].banned = true
                 await this.sendButton(m.chat, 'لقد تم حظرك بسبب الرسائل غير المرغوب فيها!', watermark, 'Bot owner', ',owner', m)
             }
