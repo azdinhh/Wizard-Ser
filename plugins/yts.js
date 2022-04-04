@@ -12,8 +12,8 @@ ${v.views} Viewer
       `.trim()
       case 'قناة': return `
 *${v.name}* (${v.url})
-_${v.subCountLabel} (${v.subCount}) Subscriber_
-${v.videoCount} video
+_${v.subCountLabel} (${v.subCount}) المشترك_
+${v.videoCount} فيديو
 `.trim()
     }
   }).filter(v => v).join('\n========================\n')
