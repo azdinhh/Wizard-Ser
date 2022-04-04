@@ -12,7 +12,7 @@
 <p align="center">
     <a href="https://git.io/J0hKr">
         <img
-        src="https://readme-typing-svg.herokuapp.com?size=30&width=800&lines=+Ser+Is+A+Modified+Version+Of;Eva+By+AZDIN;WELCOME+TO+GHRBYB+WHATSAPP+BOT."
+        src="https://readme-typing-svg.herokuapp.com?size=30&width=800&lines=+Ser+Is+A+Modified+Version+Of;تم تطويره+بواسطة+عزدين;مرحبا+غربي+واستاب+بوت."
             alt="Typing SVG"
         />
     </a>
