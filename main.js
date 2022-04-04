@@ -127,10 +127,10 @@ global.reloadHandler = function () {
     conn.off('group-update', conn.onGroupUpdate)
     conn.off('CB:action,,call', conn.onCall)
   }
-  conn.welcome = 'Hai, @user!\nWelcome to the group @subject\n\n@desc'
+  conn.welcome = 'هاي, @user!\nمرحبا بك في المجموعة @subject\n\n@desc'
   conn.bye = '@user GoodBye'
-  conn.spromote = '@user now admin'
-  conn.sdemote = '@user not admin now'
+  conn.spromote = '@user الآن مشرف'
+  conn.sdemote = '@user ليس المشرف الآن'
   conn.handler = handler.handler
   conn.onDelete = handler.delete
   conn.onParticipantsUpdate = handler.participantsUpdate
@@ -179,14 +179,14 @@ global.reload = (_event, filename) => {
     let dir = path.join(pluginFolder, filename)
     if (dir in require.cache) {
       delete require.cache[dir]
-      if (fs.existsSync(dir)) conn.logger.info(`back - requires plugin '${filename}'`)
+      if (fs.existsSync(dir)) conn.logger.info(`رجوع - يتطلب البرنامج المساعد '${filename}'`)
       else {
-        conn.logger.warn(`removed plugin '${filename}'`)
+        conn.logger.warn(`تمت إزالة البرنامج المساعد '${filename}'`)
         return delete global.plugins[filename]
       }
-    } else conn.logger.info(`need new plugin '${filename}'`)
+    } else conn.logger.info(`بحاجة إلى مكون إضافي جديد '${filename}'`)
     let err = syntaxerror(fs.readFileSync(dir), filename)
-    if (err) conn.logger.error(`syntax error when loading '${filename}'\n${err}`)
+    if (err) conn.logger.error(`خطأ في بناء الجملة عند التحميل '${filename}'\n${err}`)
     else try {
       global.plugins[filename] = require(dir)
     } catch (e) {
@@ -241,5 +241,5 @@ async function _quickTest() {
 }
 
 _quickTest()
-  .then(() => conn.logger.info('Quick Test Done'))
+  .then(() => conn.logger.info('تم إجراء الاختبار السريع'))
   .catch(console.error)
