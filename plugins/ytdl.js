@@ -3,7 +3,7 @@ let fetch = require('node-fetch')
 const { servers, yt } = require('../lib/y2mate')
 
 let handler = async (m, { itsu, args, isPrems, isOwner, usedPrefix, text }) => {
-  if (!args || !args[0]) throw 'Uhm... urlnya mana?'
+  if (!args || !args[0]) throw 'أوم ... urlnya مانا?'
   let chat = global.DATABASE.data.chats[m.chat]
   let quality = args[1] || '360'
   let server = (args[2] || servers[0]).toLowerCase()
@@ -17,32 +17,32 @@ await itsu.relayWAMessage(itsu.prepareMessageFromContent(m.chat, {
                         "زر كتابة": `Quality`,
                         "نوع القائمة": "SINGLE_SELECT",
                         "sections": [
-                            { title: '『 Quality Video』',
+                            { title: '『 جودة الفيديو』',
                                 "rows": [
                                     {
                                         "title": `اوديو`, "description":  title,
                                         "rowId": `${usedPrefix}dlmsc ${args[0]}`
                                     }, {
-                                       "title": `240p✅ , "description": title,
+                                       "لقب": `240p✅ , "description": title,
                                        "rowId": `${usedPrefix}dlvid ${args[0]} 240`
                                     }, {
-                                       "title": `360p✅`,
-"description": title, 
+                                       "لقب": `360p✅`,
+"وصف": title, 
                                        "rowId": `${usedPrefix}dlvid ${args[0]} 360`
                                     }, {
-                                       "title": `480p✅`,
-"description": title, 
+                                       "لقب": `480p✅`,
+"وصف": title, 
                                         "rowId": `${usedPrefix}dlvid ${args[0]} 480`
                                     }, {
-                                        "title": `720p✅`,
-"description": '```Sedang dalam perbaikan ❕```', 
+                                        "لقب": `720p✅`,
+"وصف": '```Sedang dalam perbaikan ❕```', 
                                         "rowId": `${usedPrefix}dlvid ${args[0]} 720`                               
                                     }, { 
-                                        "title": `1080p✅`,
-"description":  title, 
+                                        "لقب": `1080p✅`,
+"وصف":  title, 
                                         "rowId": `${usedPrefix}dlvid ${args[0]} 1080`
                                     },{
-"title": `Menu`,
+"لقب": `Menu`,
 "description": ``, 
                                        "rowId": `${usedPrefix} menu`}
                                 ]
