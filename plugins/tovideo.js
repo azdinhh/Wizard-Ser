@@ -1,9 +1,9 @@
 let { webp2mp4 } = require('../lib/webp2mp4')
 let { ffmpeg } = require('../lib/converter')
 let handler = async (m, { conn, usedPrefix, command }) => {
-    if (!m.quoted) throw `Reply to the sticker/audio you want to turn into a video with the command ${usedPrefix + command}`
+    if (!m.quoted) throw `قم بالرد على الملصق / الصوت الذي تريد تحويله إلى فيديو باستخدام الأمر ${usedPrefix + أمر}`
     let mime = m.quoted.mimetype || ''
-    if (!/webp|audio/.test(mime)) throw `Reply to the sticker/audio you want to turn into a video with the command ${usedPrefix + command}`
+    if (!/webp|audio/.test(mime)) throw `قم بالرد على الملصق / الصوت الذي تريد تحويله إلى فيديو باستخدام الأمر ${usedPrefix + أمر}`
     let media = await m.quoted.download()
     let out = Buffer.alloc(0)
     if (/webp/.test(mime)) {
