@@ -470,16 +470,16 @@ type *.on delete* to turn off this message
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'This command can only be used by _*Bot Owner✅*_',
-    owner: 'This command can only be used by _*Bot Owner✅*_',
-    mods: 'This command can only be used by _*Moderator✅*_',
-    premium: 'This command is only for _*Premium users✅*_',
-    group: 'This command can only be used in groups✅',
-    private: 'This command can only be used in Private Chat✅',
-    admin: 'This command is only for *Admin* in the group✅',
-    botAdmin: 'Make bot an *Admin* to use this command✅',
-    unreg: 'Please register to use this feature by typing:\n\n*#register name.age*\n\nEXAMPLE: *#register Wizard.18*',
-    nsfw: 'NSFW is not active'
+    rowner: '✅هاديه ميزة موجودة في بوت برو',
+    owner: '✅هاديه ميزة موجودة في بوت برو *_',
+    mods: '✅لا يمكن استخدام هذا الأمر إلا بواسطة _*الوسيط*_',
+    premium: '✅هذا الأمر فقط من أجل _*المستخدمون المتميزون*_',
+    group: '✅لا يمكن استخدام هذا الأمر إلا في مجموعات',
+    private: '✅لا يمكن استخدام هذا الأمر إلا في الدردشة الخاصة',
+    admin: '✅هذا الأمر مخصص فقط لـ * ادمين * في المجموعة',
+    botAdmin: '✅اجعل بوت مسؤولاً * لاستخدام هذا الأمر',
+    unreg: 'الرجاء التسجيل لاستخدام هذه الميزة عن طريق الكتابة:\n\n*#register الاسم.العمر*\n\nمثال: *#register الــغـــࢪبــي.18*',
+    nsfw: 'NSFW غير نشط'
   }[type]
   if (msg) return m.reply(msg)
 }
