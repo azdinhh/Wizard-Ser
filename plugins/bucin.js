@@ -13,7 +13,6 @@ handler.private = true
 handler.admin = true
 handler.botAdmin = true
 
-handler.fail = null
 
 module.exports = handler
 
