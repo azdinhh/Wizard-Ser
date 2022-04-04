@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `اه .. ما هو العنوان?\n\nمثال:\n${usedPrefix + command} sad boy`
+    if (!text) throw `اه .. ما هو العنوان?\n\nمثال:\n${usedPrefix + command} lferda`
     if (isUrl(text)) throw `اه .. لقبك لا يستخدم رابط\n\nمثال:\n${usedPrefix + command} sad boy`
 
     let res = await fetch(global.API('codefinder', '/download/joox', { search: text }, 'apikey'))
