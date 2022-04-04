@@ -9,10 +9,10 @@ CFonts.say('Ammu', {
   font: 'block',
   align: 'center',
 })
-CFonts.say(`'${package.name}' بواسطة @${package.author.name || package.author}`, {
+CFonts.say(`'${package.name}' By @${package.author.name || package.author}`, {
   colors: ['#f2aa4c'],
-  font: 'وحدة التحكم',
-  align: 'المركز',
+  font: 'console',
+  align: 'center',
 })
 
 var isRunning = false
@@ -26,8 +26,8 @@ function start(file) {
   let args = [path.join(__dirname, file), ...process.argv.slice(2)]
   CFonts.say([process.argv[0], ...args].join(' '), {
     colors: ['#f2aa4c'],
-    font: 'وحدة التحكم',
-    align: 'المركز',
+    font: 'console',
+    align: 'center',
   })
   let p = spawn(process.argv[0], args, {
     stdio: ['inherit', 'inherit', 'inherit', 'ipc']
@@ -35,26 +35,10 @@ function start(file) {
   p.on('message', data => {
     console.log('[RECEIVED]', data)
     switch (data) {
-      case 'إعادة تعيين':
+      case 'reset':
         p.kill()
         isRunning = false
         start.apply(this, arguments)
         break
-      case 'مدة التشغيل':
+      case 'uptime':
         p.send(process.uptime())
-        break
-    }
-  })
-  p.on('خروج', code => {
-    isRunning = false
-    console.error('خرج مع الكود:', code)
-    if (code === 0) return
-    fs.watchFile(args[0], () => {
-      fs.unwatchFile(args[0])
-      start(file)
-    })
-  })
-  // console.log(p)
-}
-
-start('main.js')
