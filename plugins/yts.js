@@ -1,16 +1,16 @@
 let yts = require('yt-search')
 let handler = async (m, { text, usedPrefix, command }) => {
-  if (!text) throw `Example:\n${usedPrefix + command} Rosses`
+  if (!text) throw `مثال:\n${usedPrefix + command} Rosses`
   let results = await yts(text)
   let teks = results.all.map(v => {
     switch (v.type) {
       case 'video': return `
 *${v.title}* (${v.url})
-Duration: ${v.timestamp}
-Uploaded ${v.ago}
+مدة: ${v.timestamp}
+تم الرفع ${v.ago}
 ${v.views} Viewer
       `.trim()
-      case 'channel': return `
+      case 'قناة': return `
 *${v.name}* (${v.url})
 _${v.subCountLabel} (${v.subCount}) Subscriber_
 ${v.videoCount} video
