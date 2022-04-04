@@ -12,7 +12,7 @@
 <p align="center">
     <a href="https://git.io/J0hKr">
         <img
-        src="https://readme-typing-svg.herokuapp.com?size=30&width=800&lines=+Ser+Is+A+Modified+Version+Of; Developer+by+azdin;Welcome+GHRBYB+WhatsApp+bot."
+        src="https://readme-typing-svg.herokuapp.com?size=30&width=800&lines=+Ser+Is+A+Modified+Version+Of;Developer+by+azdin;Welcome+GHRBYB+WhatsApp+bot."
             alt="Typing SVG"
         />
     </a>
