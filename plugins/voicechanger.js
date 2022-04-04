@@ -29,7 +29,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                 conn.sendFile(m.chat, buff, ran, null, m, /vn/.test(args[0]), { quoted: m, mimetype: 'audio/mp4' })
                 fs.unlinkSync(ran)
             })
-        } else throw `Reply to the vn/audio you want to change with a caption *${usedPrefix + command}*`
+        } else throw `الرد على vn / الصوت الذي تريد تغييره مع تسمية توضيحية *${usedPrefix + command}*`
     } catch (e) {
         throw e
     }
