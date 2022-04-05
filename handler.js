@@ -282,10 +282,10 @@ module.exports = {
 
           m.isCommand = true
           let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // Pendapatkan XP per Command
-          if (xp > 200) m.reply('نجيسيت -_-') // Hehehe
+          if (xp > 200) m.reply('Ngecit -_-') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-            this.reply(m.chat, `تجاوز الحد الخاص بك, يرجى الشراء عبر *${usedPrefix}يشترى*`, m)
+            this.reply(m.chat, `تجاوز الحد الخاص بك ، يرجى الشراء عبر *${usedPrefix}يشترى*`, m)
             continue // Limit habis
           }
           if (plugin.level > _user.level) {
@@ -335,7 +335,7 @@ module.exports = {
                 console.error(e)
               }
             }
-            // if (m.limit) m.reply(+ m.limit + ' حد تيرباكاي ') // Jadikan sebagai komentar jika kamu risih dengan pesan ini
+            // if (m.limit) m.reply(+ m.limit + ' Limit terpakai') // Jadikan sebagai komentar jika kamu risih dengan pesan ini
           }
           break
         }
@@ -449,7 +449,7 @@ module.exports = {
         break
     }
     user.call += 1
-    await this.reply(from, `إذا اتصلت بأكثر من 2, سيتم حظرك.\n\n${user.call} / 2`, null)
+    await this.reply(from, `إذا اتصلت بأكثر من 2 ، سيتم حظرك.\n\n${user.call} / 2`, null)
     if (user.call == 5) {
       await this.blockUser(from, 'add')
       user.call = 0
@@ -470,15 +470,15 @@ module.exports = {
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: '✅لا يمكن استخدام هذا الأمر إلا بواسطة _ * مطور البوت ',
-    owner: '✅لا يمكن استخدام هذا الأمر إلا بواسطة _ * مطور البوت  *_',
-    mods: '✅لا يمكن استخدام هذا الأمر إلا بواسطة _*الوسيط*_',
-    premium: '✅هذا الأمر فقط من أجل _*المستخدمون المتميزون*_',
+    rowner: '*✅لا يمكن استخدام هذا الأمر إلا بواسطة_ *مطور البوت_',
+    owner: '*✅لا يمكن استخدام هذا الأمر إلا بواسطة_ *مطور البوت_',
+    mods: '✅لا يمكن استخدام هذا الأمر إلا بواسطة _ * الوسيط*_',
+    premium: '✅_*هذا الأمر مخصص فقط لمستخدمي المتميزون*_',
     group: '✅لا يمكن استخدام هذا الأمر إلا في مجموعات',
     private: '✅لا يمكن استخدام هذا الأمر إلا في الدردشة الخاصة',
-    admin: '✅هذا الأمر مخصص فقط لـ * ادمين * في المجموعة',
-    botAdmin: '✅اجعل بوت مسؤولاً * لاستخدام هذا الأمر',
-    unreg: 'الرجاء التسجيل لاستخدام هذه الميزة عن طريق الكتابة:\n\n*#register الاسم.العمر*\n\nمثال: *#register الــغـــࢪبــي.18*',
+    admin: '✅هذا الأمر مخصص فقط لـ *ادمين* في المجموعة',
+    botAdmin: '✅اجعل بوت *ادمين* لاستخدام هذا الأمر',
+    unreg: 'الرجاء التسجيل لاستخدام هذه الميزة عن طريق الكتابة:\n\n*#register name.age*\n\nمثال: *#register azdin.18*',
     nsfw: 'NSFW غير نشط'
   }[type]
   if (msg) return m.reply(msg)
