@@ -4,15 +4,16 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 handler.help = ['quotes']
 handler.tags = ['quotes']
 handler.command = /^(quotes)$/i
-handler.owner = true
+handler.owner = false
 handler.mods = false
-handler.premium = true
-handler.group = true
-handler.private = true
+handler.premium = false
+handler.group = false
+handler.private = false
 
-handler.admin = true
-handler.botAdmin = true
+handler.admin = false
+handler.botAdmin = false
 
+handler.fail = null
 
 module.exports = handler
 
