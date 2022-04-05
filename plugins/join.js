@@ -21,19 +21,19 @@ module.exports = {
         };
 
         let code = args.join(" ").match(rex1);
-        if (code === null) return await msg.reply("No invite url detected.");
+        if (code === null) return await msg.reply("لم يتم الكشف عن عنوان url للدعوة.");
         code = code[0].replace("chat.whatsapp.com/", "");
         // check invite code
         const check = await queryInvite(code).catch(async () => {
-            await msg.reply("Invalid invite url.");
+            await msg.reply("عنوان url للدعوة غير صالح.");
         })
         // 
-        if (check.size >= 257) return await msg.reply("Group Full");
-        if (check.size < 80) return await msg.reply("The minimum requirement for group members must be more than 80 people.");
+        if (check.size >= 257) return await msg.reply("المجموعة كاملة");
+        if (check.size < 30) return await msg.reply("يجب أن يكون الحد الأدنى المطلوب لأعضاء المجموعة أكثر من 30 شخصًا.");
         // Trying to join group with given invite code
         await sock.groupAcceptInvite(code).catch(async () => {
-            await msg.reply("Looks like the group already full or became invalid when I'm trying to join :/");
+            await msg.reply("يبدو أن المجموعة ممتلئة بالفعل أو أصبحت غير صالحة عندما أحاول الانضمام :/");
         });
-        await msg.reply("Success join into your group.");
+        await msg.reply("نجاح الانضمام إلى مجموعتك.");
     }
 }
