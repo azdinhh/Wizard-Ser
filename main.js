@@ -93,9 +93,9 @@ if (opts['test']) {
       }
     })
   }
-  rl.on('خط', line => conn.sendMessage('123@s.whatsapp.net', line.trim(), 'محادثة'))
+  rl.on('line', line => conn.sendMessage('123@s.whatsapp.net', line.trim(), 'conversation'))
 } else {
-  rl.on('خط', line => {
+  rl.on('line', line => {
     process.send(line.trim())
   })
   conn.connect().then(async () => {
@@ -114,21 +114,21 @@ if (opts['test']) {
     global.timestamp.connect = new Date
   })
 }
-process.on('استثناء', console.error)
+process.on('uncaughtException', console.error)
 // let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
 
 let isInit = true
 global.reloadHandler = function () {
   let handler = require('./handler')
   if (!isInit) {
-    conn.off('تحديث الدردشة', conn.handler)
-    conn.off('حذف الرسائل', conn.onDelete)
-    conn.off('مجموعة المشاركين تحديثe', conn.onParticipantsUpdate)
-    conn.off('مجموعة التحديث', conn.onGroupUpdate)
-    conn.off('CB:عمل,,يتصل', conn.onCall)
+    conn.off('chat-update', conn.handler)
+    conn.off('message-delete', conn.onDelete)
+    conn.off('group-participants-update', conn.onParticipantsUpdate)
+    conn.off('group-update', conn.onGroupUpdate)
+    conn.off('CB:action,,call', conn.onCall)
   }
   conn.welcome = 'هاي, @user!\nمرحبا بك في المجموعة @subject\n\n@desc'
-  conn.bye = '@user GoodBye'
+  conn.bye = '@user مع السلامة'
   conn.spromote = '@user الآن مشرف'
   conn.sdemote = '@user ليس المشرف الآن'
   conn.handler = handler.handler
@@ -137,16 +137,16 @@ global.reloadHandler = function () {
   conn.onGroupUpdate = handler.GroupUpdate
   conn.onCall = handler.onCall
   conn.on('chat-update', conn.handler)
-  conn.on('حذف الرسائل', conn.onDelete)
-  conn.on('مجموعة المشاركين تحديث', conn.onParticipantsUpdate)
-  conn.on('مجموعة التحديث', conn.onGroupUpdate)
-  conn.on('CB:عمل,,يتصل', conn.onCall)
+  conn.on('message-delete', conn.onDelete)
+  conn.on('group-participants-update', conn.onParticipantsUpdate)
+  conn.on('group-update', conn.onGroupUpdate)
+  conn.on('CB:action,,call', conn.onCall)
   if (isInit) {
     conn.on('error', conn.logger.error)
     conn.on('close', () => {
       setTimeout(async () => {
         try {
-          if (conn.state === 'قريب') {
+          if (conn.state === 'close') {
             if (fs.existsSync(authFile)) await conn.loadAuthInfo(authFile)
             await conn.connect()
             fs.writeFileSync(authFile, JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
@@ -163,7 +163,7 @@ global.reloadHandler = function () {
 }
 
 // Plugin Loader
-let pluginFolder = path.join(__dirname, 'الإضافات')
+let pluginFolder = path.join(__dirname, 'plugins')
 let pluginFilter = filename => /\.js$/.test(filename)
 global.plugins = {}
 for (let filename of fs.readdirSync(pluginFolder).filter(pluginFilter)) {
@@ -179,14 +179,14 @@ global.reload = (_event, filename) => {
     let dir = path.join(pluginFolder, filename)
     if (dir in require.cache) {
       delete require.cache[dir]
-      if (fs.existsSync(dir)) conn.logger.info(`رجوع - يتطلب البرنامج المساعد '${filename}'`)
+      if (fs.existsSync(dir)) conn.logger.info(`back - requires plugin '${filename}'`)
       else {
-        conn.logger.warn(`تمت إزالة البرنامج المساعد '${filename}'`)
+        conn.logger.warn(`removed plugin '${filename}'`)
         return delete global.plugins[filename]
       }
-    } else conn.logger.info(`بحاجة إلى مكون إضافي جديد '${filename}'`)
+    } else conn.logger.info(`need new plugin '${filename}'`)
     let err = syntaxerror(fs.readFileSync(dir), filename)
-    if (err) conn.logger.error(`خطأ في بناء الجملة عند التحميل '${filename}'\n${err}`)
+    if (err) conn.logger.error(`syntax error when loading '${filename}'\n${err}`)
     else try {
       global.plugins[filename] = require(dir)
     } catch (e) {
@@ -197,7 +197,7 @@ global.reload = (_event, filename) => {
   }
 }
 Object.freeze(global.reload)
-fs.watch(path.join(__dirname, 'الإضافات'), global.reload)
+fs.watch(path.join(__dirname, 'plugins'), global.reload)
 global.reloadHandler()
 
 
@@ -235,11 +235,11 @@ async function _quickTest() {
   require('./lib/sticker').support = s
   Object.freeze(global.support)
 
-  if (!s.ffmpeg) conn.logger.warn('الرجاء تثبيت ffmpeg لإرسال مقاطع الفيديو (تثبيت pkg ffmpeg)')
-  if (s.ffmpeg && !s.ffmpegWebp) conn.logger.warn('لا يمكن تحريك الملصقات بدون libwebp على ffmpeg (--enable-ibwebp أثناء تجميع ffmpeg)')
-  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('قد لا تعمل الملصقات بدون تخيل الصورة إذا لم يتم تثبيت libwebp في ffmpeg (تثبيت برنامج pkg)')
+  if (!s.ffmpeg) conn.logger.warn('Please install ffmpeg to send videos (pkg install ffmpeg)')
+  if (s.ffmpeg && !s.ffmpegWebp) conn.logger.warn('Stickers cant be animated without libwebp on ffmpeg (--enable-ibwebp while compiling ffmpeg)')
+  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('Stickers may not work without imagemagick if libwebp in ffmpeg is not installed (pkg install imagemagick)')
 }
 
 _quickTest()
-  .then(() => conn.logger.info('تم إجراء الاختبار السريع'))
+  .then(() => conn.logger.info('Quick Test Done'))
   .catch(console.error)
