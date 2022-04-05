@@ -35,7 +35,7 @@ function _0x3dc2(_0x4d22a2,_0x4bda1a){var _0x5e0a56=_0x5e0a();return _0x3dc2=fun
 
 global.wait = '_*مهلا انتضر*_'
 global.eror = '_*مشكل في سرفر_'
-global.fla = 'https://user-images.githubusercontent.com/102433984/160276111-32392546-2963-4d06-8721-462681d0bbbf.jpg'
+global.fla = 'https://user-images.githubusercontent.com/102433984/161562586-a3c8714e-4704-46a6-97e5-bec83b5644c0.gif'
 
 global.watermark = '© الغربي'
 
