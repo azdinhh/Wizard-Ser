@@ -4,7 +4,7 @@
   <img border-radius: 15px src="https://user-images.githubusercontent.com/102433984/161561361-4f1e92af-d7bd-495f-828f-ca212d624f37.gif" width="200" height="200"/>
 
 <p align="center">
-  <a href="https://instagram.com/azdi_n_1?=nametag"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/> 
+  <a href="https://instagram.com/azdi_n_1?=nametag"><img src="https://img.shields.io/badge/Instagram-Follow-orange.svg?style=flat-square&logo=instagram"/> 
   <a href="https://wa.me/21241427490"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </p>
 
