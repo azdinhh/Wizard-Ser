@@ -1,27 +1,39 @@
-let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
+const { getBinaryNodeChild } = require("@adiwajshing/baileys");
 
-let handler = async (m, { conn, text, usedPrefix }) => {
-    let [_, code] = text.match(linkRegex) || []
-    if (!code) throw 'رابط خطا'
-    let res = await conn.acceptInvite(code)
-    m.reply(`انضم بنجاح إلى المجموعة ${res.gid}`).then(() => {
-        var jumlahHari = 86400000 * 3
-        var now = new Date() * 1
-        if (now < global.db.data.chats[res.gid].expired) global.db.data.chats[res.gid].expired += jumlahHari
-        else global.db.data.chats[res.gid].expired = now + jumlahHari
-    })
-    conn.sendButton(res.gid, `
-*${conn.user.name}*هاي انا نيزوكو انا بوت اقوم بعدت ميزات, *${conn.user.name}* بدعوة من @${m.sender.split`@`[0]}
-    
-اكتب *${usedPrefix}menu* لرؤية قائمة الأوامر`.trim(), watermark, 'Menu', `${usedPrefix}?`, 0, { contextInfo: { mentionedJid: [m.sender] } })
+module.exports = {
+    name: "join",
+    category: "misc",
+    desc: "Join to group using invite url.",
+    async exec(msg, sock, args) {
+        // search for invite url
+        const rex1 = /chat.whatsapp.com\/([\w\d]*)/g;
+        const queryInvite = async (code) => {
+            const results = await sock.query({
+                tag: "iq",
+                attrs: {
+                    type: "get",
+                    xmlns: "w:g2",
+                    to: "@g.us"
+                }, content: [{ tag: "invite", attrs: { code } }]
+            })
+            const group = getBinaryNodeChild(results, "group");
+            return group.attrs;
+        };
+
+        let code = args.join(" ").match(rex1);
+        if (code === null) return await msg.reply("No invite url detected.");
+        code = code[0].replace("chat.whatsapp.com/", "");
+        // check invite code
+        const check = await queryInvite(code).catch(async () => {
+            await msg.reply("Invalid invite url.");
+        })
+        // 
+        if (check.size >= 257) return await msg.reply("Group Full");
+        if (check.size < 80) return await msg.reply("The minimum requirement for group members must be more than 80 people.");
+        // Trying to join group with given invite code
+        await sock.groupAcceptInvite(code).catch(async () => {
+            await msg.reply("Looks like the group already full or became invalid when I'm trying to join :/");
+        });
+        await msg.reply("Success join into your group.");
+    }
 }
-handler.help = ['join <chat.whatsapp.com>']
-handler.tags = ['']
-
-handler.command = /^join$/i
-
-handler.premium = true
-
-handler.owner = false
-
-module.exports = handler
